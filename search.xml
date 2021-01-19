@@ -3,7 +3,8 @@
   <entry>
     <title>這是測試</title>
     <url>/2021/01/19/Test/</url>
-    <content><![CDATA[<h1 id="測試它"><a href="#測試它" class="headerlink" title="測試它"></a>測試它</h1><h2 id="Title2"><a href="#Title2" class="headerlink" title="Title2"></a>Title2</h2><h3 id="Title3"><a href="#Title3" class="headerlink" title="Title3"></a>Title3</h3><ul>
+    <content><![CDATA[<h1 id="測試它"><a href="#測試它" class="headerlink" title="測試它"></a>測試它</h1><p>tags: “test”</p>
+<h2 id="Title2"><a href="#Title2" class="headerlink" title="Title2"></a>Title2</h2><h3 id="Title3"><a href="#Title3" class="headerlink" title="Title3"></a>Title3</h3><ul>
 <li>列表1</li>
 <li>列表2</li>
 <li>列表3</li>
@@ -26,5 +27,13 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>test2</title>
+    <url>/2021/01/20/test2/</url>
+    <content><![CDATA[<h1 id="測試我"><a href="#測試我" class="headerlink" title="測試我"></a>測試我</h1>]]></content>
+      <tags>
+        <tag>test</tag>
+      </tags>
   </entry>
 </search>
