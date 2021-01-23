@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>2017 未來商務展</title>
-    <url>/sideproject/20170818/2468639948/</url>
-    <content><![CDATA[<p><img src="/images/img-26.png"></p>
-<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
-<li>Google OAuth 2.0 登錄</li>
-<li>FullCalendar</li>
-<li>Api介接同步資料</li>
-</ul>
-]]></content>
-      <categories>
-        <category>作品集</category>
-      </categories>
-  </entry>
-  <entry>
     <title>SCRUM 計點工具</title>
     <url>/sideproject/20180311/3502048096/</url>
     <content><![CDATA[<p><img src="/images/img-24.png"></p>
@@ -29,19 +15,21 @@
       </categories>
   </entry>
   <entry>
-    <title>內政部公有土地管理地理資訊系統</title>
-    <url>/sideproject/20160328/2941290366/</url>
-    <content><![CDATA[<p><img src="/images/img-13.png"></p>
-<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>內政部(以下簡稱 貴部) 鑑於各縣市政府對於地理資訊應用系統需求殷切，所需系統功能或有類似情形，為避免重複建置，爰考量規劃及開發有關縣市政府為民服務及施政輔助之共通性地理資訊應用系統，俾利節省公帑並彰顯國土資訊系統推動成效。本案包含「都市計畫土地使用分區查詢及核發資訊系統」(以下簡稱分區系統)及「公有土地管理地理資訊系統」(以下簡稱公地系統)2個資訊系統， 貴部於99及100年度委由巨鷗科技股份有限公司分別開發供縣市政府使用。其中分區系統99年提供桃園縣及新竹縣政府使用，100年度提供彰化縣及雲林縣政府使用，101年度進一步提供澎湖縣政府使用;公地系統100年度提供彰化縣及南投縣政府使用，102年度則提供嘉義市政府與屏東縣政府使用，103年度亦成功導入桃園縣政府與苗栗縣政府使用；考量整體分區系統推動業務權責屬 貴部營建署範疇，因此自102年起分區系統僅針對已導入縣市系統進行維護。104年規劃強化共通性地理資訊應用系統輔導及推動作業，除進行本案系統維運及推廣作業外，持續針對縣市政府提出之系統功能需求進行擴充開發。</p>
+    <title>2017 未來商務展</title>
+    <url>/sideproject/20170818/2468639948/</url>
+    <content><![CDATA[<p><img src="/images/img-26.png"></p>
 <h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
-<li>空間分析</li>
-<li>TGOS MAP API</li>
-<li>分佈七個縣市</li>
+<li>Google OAuth 2.0 登錄</li>
+<li>FullCalendar</li>
+<li>Api介接同步資料</li>
 </ul>
 ]]></content>
       <categories>
         <category>作品集</category>
       </categories>
+      <tags>
+        <tag>入口網</tag>
+      </tags>
   </entry>
   <entry>
     <title>WONDER TOUR智慧體驗旅遊平台</title>
@@ -63,17 +51,23 @@
       </categories>
   </entry>
   <entry>
-    <title>喜富客大足石刻</title>
-    <url>/sideproject/20160611/990744127/</url>
-    <content><![CDATA[<p><img src="/images/img-21.png"></p>
+    <title>內政部公有土地管理地理資訊系統</title>
+    <url>/sideproject/20160328/2941290366/</url>
+    <content><![CDATA[<p><img src="/images/img-13.png"></p>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>內政部(以下簡稱 貴部) 鑑於各縣市政府對於地理資訊應用系統需求殷切，所需系統功能或有類似情形，為避免重複建置，爰考量規劃及開發有關縣市政府為民服務及施政輔助之共通性地理資訊應用系統，俾利節省公帑並彰顯國土資訊系統推動成效。本案包含「都市計畫土地使用分區查詢及核發資訊系統」(以下簡稱分區系統)及「公有土地管理地理資訊系統」(以下簡稱公地系統)2個資訊系統， 貴部於99及100年度委由巨鷗科技股份有限公司分別開發供縣市政府使用。其中分區系統99年提供桃園縣及新竹縣政府使用，100年度提供彰化縣及雲林縣政府使用，101年度進一步提供澎湖縣政府使用;公地系統100年度提供彰化縣及南投縣政府使用，102年度則提供嘉義市政府與屏東縣政府使用，103年度亦成功導入桃園縣政府與苗栗縣政府使用；考量整體分區系統推動業務權責屬 貴部營建署範疇，因此自102年起分區系統僅針對已導入縣市系統進行維護。104年規劃強化共通性地理資訊應用系統輔導及推動作業，除進行本案系統維運及推廣作業外，持續針對縣市政府提出之系統功能需求進行擴充開發。</p>
 <h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
-<li>串接 HiTRUSTpay 金流</li>
-<li>AngularJS</li>
+<li>空間分析</li>
+<li>TGOS MAP API</li>
+<li>分佈七個縣市</li>
 </ul>
 ]]></content>
       <categories>
         <category>作品集</category>
       </categories>
+      <tags>
+        <tag>MIS</tag>
+        <tag>GIS</tag>
+      </tags>
   </entry>
   <entry>
     <title>冠恆聯合會計師事務所入口網</title>
@@ -97,17 +91,17 @@
       <categories>
         <category>作品集</category>
       </categories>
+      <tags>
+        <tag>入口網</tag>
+      </tags>
   </entry>
   <entry>
-    <title>國合會國際高等人力培訓外籍生獎學金計畫線上報名系統</title>
-    <url>/sideproject/20171121/2708348727/</url>
-    <content><![CDATA[<p><img src="/images/img-17.png"></p>
-<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>本基金會國際高等人力培訓外籍生獎學金計畫，係補助友邦及友好開發中國家政府官員或專業人士來台留學之全額獎學金計畫。截至102年12月止，本基金會外籍生獎學金計畫已與國內20所大學合作，共設立30項博、碩、學士學程，每年超過500名申請者報名，約200名申請者受獎錄取。</p>
-<p>為因應本計畫自明(103)學年度起新增「混和型華語學程」類別，系統須調整報名介面與相關表件；另為整合業務需要將規劃EIP獎學金計畫系統資料匯入本報名系統及新增功能，以提高本計畫之運作效能。另新增駐校經理學年工作檢討報告上載。</p>
+    <title>喜富客大足石刻</title>
+    <url>/sideproject/20160611/990744127/</url>
+    <content><![CDATA[<p><img src="/images/img-21.png"></p>
 <h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
-<li>NPOI</li>
-<li>DataSet .xsd</li>
-<li>NLog</li>
+<li>串接 HiTRUSTpay 金流</li>
+<li>AngularJS</li>
 </ul>
 ]]></content>
       <categories>
@@ -129,6 +123,39 @@
       <categories>
         <category>作品集</category>
       </categories>
+      <tags>
+        <tag>MIS</tag>
+        <tag>報名系統</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>國合會國際高等人力培訓外籍生獎學金計畫線上報名系統</title>
+    <url>/sideproject/20171121/2708348727/</url>
+    <content><![CDATA[<p><img src="/images/img-17.png"></p>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>本基金會國際高等人力培訓外籍生獎學金計畫，係補助友邦及友好開發中國家政府官員或專業人士來台留學之全額獎學金計畫。截至102年12月止，本基金會外籍生獎學金計畫已與國內20所大學合作，共設立30項博、碩、學士學程，每年超過500名申請者報名，約200名申請者受獎錄取。</p>
+<p>為因應本計畫自明(103)學年度起新增「混和型華語學程」類別，系統須調整報名介面與相關表件；另為整合業務需要將規劃EIP獎學金計畫系統資料匯入本報名系統及新增功能，以提高本計畫之運作效能。另新增駐校經理學年工作檢討報告上載。</p>
+<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
+<li>NPOI</li>
+<li>DataSet .xsd</li>
+<li>NLog</li>
+</ul>
+]]></content>
+      <categories>
+        <category>作品集</category>
+      </categories>
+      <tags>
+        <tag>報名系統</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>國合會志工業務管理系統</title>
+    <url>/sideproject/20170618/610341380/</url>
+    <content><![CDATA[<p><img src="/images/img-15.png"></p>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>在現行財團法人國際合作發展基金會（以下簡稱　貴會）力行興革，並訂定在2022年成為永續發展的最佳夥伴之願景下，如何有效運用人力資源實現以人力資本為主之管理模式，儼然成為　貴會首當其衝必須面對的課題；另貴會於99年7月成立人事室，業已賦予人事室（現行人力資源室）成為企業經營者策略夥伴角色之使命。鑒於前述考量，　貴會原購置之人力資源系統僅供進行初階之人力資源管理，致欲進行進階人資相關資料之整合與分析時，所產出之資料無法即時運用且錯誤甚多，且現行人力資源管理功能（系統）係由不同的三家廠商所提供，相互功能間無法有效整合，廠商管理亦增困難，因此擬依目前業務需要規劃建置新系統，以因應日益增多之人資業務，茲就系統函蓋範圍及說明如後。</p>
+]]></content>
+      <categories>
+        <category>作品集</category>
+      </categories>
   </entry>
   <entry>
     <title>國合會技術合作計畫管理系統</title>
@@ -145,16 +172,9 @@
       <categories>
         <category>作品集</category>
       </categories>
-  </entry>
-  <entry>
-    <title>國合會志工業務管理系統</title>
-    <url>/sideproject/20170618/610341380/</url>
-    <content><![CDATA[<p><img src="/images/img-15.png"></p>
-<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>在現行財團法人國際合作發展基金會（以下簡稱　貴會）力行興革，並訂定在2022年成為永續發展的最佳夥伴之願景下，如何有效運用人力資源實現以人力資本為主之管理模式，儼然成為　貴會首當其衝必須面對的課題；另貴會於99年7月成立人事室，業已賦予人事室（現行人力資源室）成為企業經營者策略夥伴角色之使命。鑒於前述考量，　貴會原購置之人力資源系統僅供進行初階之人力資源管理，致欲進行進階人資相關資料之整合與分析時，所產出之資料無法即時運用且錯誤甚多，且現行人力資源管理功能（系統）係由不同的三家廠商所提供，相互功能間無法有效整合，廠商管理亦增困難，因此擬依目前業務需要規劃建置新系統，以因應日益增多之人資業務，茲就系統函蓋範圍及說明如後。</p>
-]]></content>
-      <categories>
-        <category>作品集</category>
-      </categories>
+      <tags>
+        <tag>MIS</tag>
+      </tags>
   </entry>
   <entry>
     <title>彰化縣政府勞工處工業發展空間資訊整合平台</title>
@@ -165,6 +185,10 @@
       <categories>
         <category>作品集</category>
       </categories>
+      <tags>
+        <tag>MIS</tag>
+        <tag>GIS</tag>
+      </tags>
   </entry>
   <entry>
     <title>彰化縣政府幸福企業甄選</title>
@@ -181,6 +205,9 @@
       <categories>
         <category>作品集</category>
       </categories>
+      <tags>
+        <tag>入口網</tag>
+      </tags>
   </entry>
   <entry>
     <title>技術入口網</title>
@@ -195,6 +222,9 @@
       <categories>
         <category>作品集</category>
       </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
   </entry>
   <entry>
     <title>新北市工廠空間資訊管理系統</title>
@@ -211,6 +241,9 @@
       <categories>
         <category>作品集</category>
       </categories>
+      <tags>
+        <tag>MIS</tag>
+      </tags>
   </entry>
   <entry>
     <title>新北市招商資訊整合服務平臺</title>
@@ -227,6 +260,9 @@
       <categories>
         <category>作品集</category>
       </categories>
+      <tags>
+        <tag>MIS</tag>
+      </tags>
   </entry>
   <entry>
     <title>水保局105年度水土保持公共工程技術品質提升計畫</title>
@@ -258,6 +294,9 @@
       <categories>
         <category>作品集</category>
       </categories>
+      <tags>
+        <tag>MIS</tag>
+      </tags>
   </entry>
   <entry>
     <title>水保局農村再生執行及管理系統</title>
@@ -319,6 +358,9 @@
       <categories>
         <category>作品集</category>
       </categories>
+      <tags>
+        <tag>入口網</tag>
+      </tags>
   </entry>
   <entry>
     <title>行政院農業委員會水土保持局農村風情網-銀髮版</title>
@@ -334,6 +376,9 @@
       <categories>
         <category>作品集</category>
       </categories>
+      <tags>
+        <tag>入口網</tag>
+      </tags>
   </entry>
   <entry>
     <title>行政院農業委員會水土保持局農村風情網</title>
@@ -349,6 +394,9 @@
       <categories>
         <category>作品集</category>
       </categories>
+      <tags>
+        <tag>入口網</tag>
+      </tags>
   </entry>
   <entry>
     <title>高雄市工廠空間地理資訊系統</title>
@@ -365,5 +413,9 @@
       <categories>
         <category>作品集</category>
       </categories>
+      <tags>
+        <tag>MIS</tag>
+        <tag>GIS</tag>
+      </tags>
   </entry>
 </search>
