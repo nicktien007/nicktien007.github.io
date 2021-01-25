@@ -32,25 +32,6 @@
       </categories>
   </entry>
   <entry>
-    <title>WONDER TOUR智慧體驗旅遊平台</title>
-    <url>/sideproject/20171121/2030370342/</url>
-    <content><![CDATA[<p><img src="/images/img-29.png"></p>
-<h2 id="WONDER-TOUR-5大特色服務，創造民眾有感體驗"><a href="#WONDER-TOUR-5大特色服務，創造民眾有感體驗" class="headerlink" title="WONDER TOUR 5大特色服務，創造民眾有感體驗"></a>WONDER TOUR 5大特色服務，創造民眾有感體驗</h2><h3 id="1-快速集客，遊客慕名湧來！"><a href="#1-快速集客，遊客慕名湧來！" class="headerlink" title="1 快速集客，遊客慕名湧來！"></a>1 快速集客，遊客慕名湧來！</h3><p>Wonder Tour依所在區域及興趣內容智慧推薦活動景點及好康優惠，讓顧客不錯失任何資訊，吸引親臨現場體驗。</p>
-<h3 id="2-個人體驗，專屬您的服務！"><a href="#2-個人體驗，專屬您的服務！" class="headerlink" title="2 個人體驗，專屬您的服務！"></a>2 個人體驗，專屬您的服務！</h3><p>Wonder Tour如同隨身導遊帶領顧客探索園區每個角落。虛擬體驗、語音導覽、擴增實境等科技，創造顧客有感體驗。</p>
-<h3 id="3-互動樂趣，增加遊客記憶！"><a href="#3-互動樂趣，增加遊客記憶！" class="headerlink" title="3 互動樂趣，增加遊客記憶！"></a>3 互動樂趣，增加遊客記憶！</h3><p>結合園區互動看板提供DIY體驗、互動射飛鏢、限時搖金幣、闖關集章拿優惠…等趣味遊戲，園區好玩到停不了！</p>
-<h3 id="4-行動消費，立馬線上訂購！"><a href="#4-行動消費，立馬線上訂購！" class="headerlink" title="4 行動消費，立馬線上訂購！"></a>4 行動消費，立馬線上訂購！</h3><p>Wonder Tour 24hr線上不打烊，蒐集全台商品資訊，讓顧客不限時空限制、盡情shopping！結合社群登入、線上金流，輕鬆購物很便利。</p>
-<h3 id="5-商務分析，掌握消費行為！"><a href="#5-商務分析，掌握消費行為！" class="headerlink" title="5 商務分析，掌握消費行為！"></a>5 商務分析，掌握消費行為！</h3><p>蒐集社群平台及園區顧客行為流程，發掘潛在客戶及商機，瞭解熱門度及顧客商品喜好。懂得消費者行為，才能搶佔商機。</p>
-<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
-<li>Microsoft Azure：雲端服務</li>
-<li>SQL Project 資料庫專案</li>
-<li>WebAPI</li>
-</ul>
-]]></content>
-      <categories>
-        <category>作品集</category>
-      </categories>
-  </entry>
-  <entry>
     <title>內政部公有土地管理地理資訊系統</title>
     <url>/sideproject/20160328/2941290366/</url>
     <content><![CDATA[<p><img src="/images/img-13.png"></p>
@@ -96,6 +77,19 @@
       </tags>
   </entry>
   <entry>
+    <title>喜富客大足石刻</title>
+    <url>/sideproject/20160611/990744127/</url>
+    <content><![CDATA[<p><img src="/images/img-21.png"></p>
+<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
+<li>串接 HiTRUSTpay 金流</li>
+<li>AngularJS</li>
+</ul>
+]]></content>
+      <categories>
+        <category>作品集</category>
+      </categories>
+  </entry>
+  <entry>
     <title>國合會國際人力培訓線上報名暨管理系統</title>
     <url>/sideproject/20170921/983983372/</url>
     <content><![CDATA[<p><img src="/images/img-16.png"></p>
@@ -116,17 +110,23 @@
       </tags>
   </entry>
   <entry>
-    <title>喜富客大足石刻</title>
-    <url>/sideproject/20160611/990744127/</url>
-    <content><![CDATA[<p><img src="/images/img-21.png"></p>
+    <title>國合會國際高等人力培訓外籍生獎學金計畫線上報名系統</title>
+    <url>/sideproject/20171121/2708348727/</url>
+    <content><![CDATA[<p><img src="/images/img-17.png"></p>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>本基金會國際高等人力培訓外籍生獎學金計畫，係補助友邦及友好開發中國家政府官員或專業人士來台留學之全額獎學金計畫。截至102年12月止，本基金會外籍生獎學金計畫已與國內20所大學合作，共設立30項博、碩、學士學程，每年超過500名申請者報名，約200名申請者受獎錄取。</p>
+<p>為因應本計畫自明(103)學年度起新增「混和型華語學程」類別，系統須調整報名介面與相關表件；另為整合業務需要將規劃EIP獎學金計畫系統資料匯入本報名系統及新增功能，以提高本計畫之運作效能。另新增駐校經理學年工作檢討報告上載。</p>
 <h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
-<li>串接 HiTRUSTpay 金流</li>
-<li>AngularJS</li>
+<li>NPOI</li>
+<li>DataSet .xsd</li>
+<li>NLog</li>
 </ul>
 ]]></content>
       <categories>
         <category>作品集</category>
       </categories>
+      <tags>
+        <tag>報名系統</tag>
+      </tags>
   </entry>
   <entry>
     <title>國合會志工業務管理系統</title>
@@ -155,39 +155,6 @@
       </categories>
       <tags>
         <tag>MIS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>國合會國際高等人力培訓外籍生獎學金計畫線上報名系統</title>
-    <url>/sideproject/20171121/2708348727/</url>
-    <content><![CDATA[<p><img src="/images/img-17.png"></p>
-<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>本基金會國際高等人力培訓外籍生獎學金計畫，係補助友邦及友好開發中國家政府官員或專業人士來台留學之全額獎學金計畫。截至102年12月止，本基金會外籍生獎學金計畫已與國內20所大學合作，共設立30項博、碩、學士學程，每年超過500名申請者報名，約200名申請者受獎錄取。</p>
-<p>為因應本計畫自明(103)學年度起新增「混和型華語學程」類別，系統須調整報名介面與相關表件；另為整合業務需要將規劃EIP獎學金計畫系統資料匯入本報名系統及新增功能，以提高本計畫之運作效能。另新增駐校經理學年工作檢討報告上載。</p>
-<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
-<li>NPOI</li>
-<li>DataSet .xsd</li>
-<li>NLog</li>
-</ul>
-]]></content>
-      <categories>
-        <category>作品集</category>
-      </categories>
-      <tags>
-        <tag>報名系統</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>彰化縣政府勞工處工業發展空間資訊整合平台</title>
-    <url>/sideproject/20160809/1763360179/</url>
-    <content><![CDATA[<p><img src="/images/img-12.png"></p>
-<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>彰化縣為全國第五大工業縣市，主要特色產業有紡織、織襪、蜜餞、水五金、酒類、稻米、糕餅、自行車零組件及投籃機等產品，近年來彰化縣政府更積極進行產業加值與轉型，隨著中科四期二林園區的發展，更加速產業升級與轉型的契機，鑒於產業發展政策及永續經營之需求，爰此，彰化縣政府於民國101年度建置「彰化縣工業發展空間資訊整合平台」，建構彰化縣境內工業資訊單一入口平台，俾利民眾、廠商、公會及縣府人員可以透過平台進行工業資訊交流、產業產品展示、租售資訊發布及觀光工廠呈現，藉以促進商機拓展行銷及活絡產業經濟發展。因此，上述平台儼然成為彰化縣產業資訊單一入口平台，為使彰化縣境內產業所發佈的就業徵才資訊可以有更多曝光機會，103年度完成建構平台第五大主題資訊平台「就業服務通」，除了提供一般民眾可以查詢瀏覽彰化縣產業就業徵才資訊外，並且查詢彰化縣政府勞工處所發布之最新消息，藉以強化彰化縣工業發展空間資訊整合平台建置之效益。</p>
-]]></content>
-      <categories>
-        <category>作品集</category>
-      </categories>
-      <tags>
-        <tag>MIS</tag>
-        <tag>GIS</tag>
       </tags>
   </entry>
   <entry>
@@ -416,6 +383,20 @@
       </tags>
   </entry>
   <entry>
+    <title>彰化縣政府勞工處工業發展空間資訊整合平台</title>
+    <url>/sideproject/20160809/1763360179/</url>
+    <content><![CDATA[<p><img src="/images/img-12.png"></p>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>彰化縣為全國第五大工業縣市，主要特色產業有紡織、織襪、蜜餞、水五金、酒類、稻米、糕餅、自行車零組件及投籃機等產品，近年來彰化縣政府更積極進行產業加值與轉型，隨著中科四期二林園區的發展，更加速產業升級與轉型的契機，鑒於產業發展政策及永續經營之需求，爰此，彰化縣政府於民國101年度建置「彰化縣工業發展空間資訊整合平台」，建構彰化縣境內工業資訊單一入口平台，俾利民眾、廠商、公會及縣府人員可以透過平台進行工業資訊交流、產業產品展示、租售資訊發布及觀光工廠呈現，藉以促進商機拓展行銷及活絡產業經濟發展。因此，上述平台儼然成為彰化縣產業資訊單一入口平台，為使彰化縣境內產業所發佈的就業徵才資訊可以有更多曝光機會，103年度完成建構平台第五大主題資訊平台「就業服務通」，除了提供一般民眾可以查詢瀏覽彰化縣產業就業徵才資訊外，並且查詢彰化縣政府勞工處所發布之最新消息，藉以強化彰化縣工業發展空間資訊整合平台建置之效益。</p>
+]]></content>
+      <categories>
+        <category>作品集</category>
+      </categories>
+      <tags>
+        <tag>MIS</tag>
+        <tag>GIS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>彰化縣政府幸福企業甄選</title>
     <url>/sideproject/20171218/3450408317/</url>
     <content><![CDATA[<p><img src="/images/img-20.png"></p>
@@ -524,6 +505,22 @@
       </tags>
   </entry>
   <entry>
+    <title>水保局農村再生執行及管理系統</title>
+    <url>/sideproject/20170211/2820871682/</url>
+    <content><![CDATA[<p><img src="/images/img-11.png"></p>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>我國為促進農村活化再生，提升農村整體發展，恢復農村 居民在地居住尊嚴，以達建設富麗新農村之目標，將推動農村 再生列為重要之課題。為推動農村再生並執行農村再生條例與 農村再生計畫，特建置『農村再生執行及管理系統』，供農村 再生執行計畫之工程執行情形、施工進度、相關管理維護、品 質管理監督、三級品管品質文件推廣展示及會計相關作業等， 首創以一站式電子化方式統合管理農村再生工程、品質、會計 和文件等作業流程，使用對象包含水保局、六大分局、縣市政 府、鄉鎮公所及委外廠商等業務角色，以利農村再生工程順利 執行完成，達成農村再生計畫願景。</p>
+<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
+<li>單一登錄(SSO)</li>
+<li>大量使用Stored Procedure</li>
+<li>ADO.NET：EDMX</li>
+<li>採用UCO/PO架構</li>
+</ul>
+]]></content>
+      <categories>
+        <category>作品集</category>
+      </categories>
+  </entry>
+  <entry>
     <title>水利署104年度委辦計畫成果發表會</title>
     <url>/sideproject/20150625/4036074347/</url>
     <content><![CDATA[<p><img src="/images/img-6.png"></p>
@@ -548,22 +545,6 @@
     <url>/sideproject/20170126/3398055004/</url>
     <content><![CDATA[<p><img src="/images/img-1.png" alt="upload successful"></p>
 <h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>106年度水利署主辦執行水利工程計畫，牽涉較多機關單位，且目標複雜度、困難度及挑戰性極高，在推動過程中須加強協調問題及不可抗力之影響因素；為強化計畫主協辦等相關人員管理作為及提升多元化能力，爰邀集水利署暨所屬機關列管計畫主（協）辦、管理及相關人員共同研習施政計畫管理作業，藉以不斷加強專業廣度及深度並提升計畫執行效率及績效目標。</p>
-]]></content>
-      <categories>
-        <category>作品集</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>水保局農村再生執行及管理系統</title>
-    <url>/sideproject/20170211/2820871682/</url>
-    <content><![CDATA[<p><img src="/images/img-11.png"></p>
-<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>我國為促進農村活化再生，提升農村整體發展，恢復農村 居民在地居住尊嚴，以達建設富麗新農村之目標，將推動農村 再生列為重要之課題。為推動農村再生並執行農村再生條例與 農村再生計畫，特建置『農村再生執行及管理系統』，供農村 再生執行計畫之工程執行情形、施工進度、相關管理維護、品 質管理監督、三級品管品質文件推廣展示及會計相關作業等， 首創以一站式電子化方式統合管理農村再生工程、品質、會計 和文件等作業流程，使用對象包含水保局、六大分局、縣市政 府、鄉鎮公所及委外廠商等業務角色，以利農村再生工程順利 執行完成，達成農村再生計畫願景。</p>
-<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
-<li>單一登錄(SSO)</li>
-<li>大量使用Stored Procedure</li>
-<li>ADO.NET：EDMX</li>
-<li>採用UCO/PO架構</li>
-</ul>
 ]]></content>
       <categories>
         <category>作品集</category>
@@ -642,5 +623,24 @@
         <tag>MIS</tag>
         <tag>GIS</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>WONDER TOUR智慧體驗旅遊平台</title>
+    <url>/sideproject/20171121/2030370342/</url>
+    <content><![CDATA[<p><img src="/images/img-29.png"></p>
+<h2 id="WONDER-TOUR-5大特色服務，創造民眾有感體驗"><a href="#WONDER-TOUR-5大特色服務，創造民眾有感體驗" class="headerlink" title="WONDER TOUR 5大特色服務，創造民眾有感體驗"></a>WONDER TOUR 5大特色服務，創造民眾有感體驗</h2><h3 id="1-快速集客，遊客慕名湧來！"><a href="#1-快速集客，遊客慕名湧來！" class="headerlink" title="1 快速集客，遊客慕名湧來！"></a>1 快速集客，遊客慕名湧來！</h3><p>Wonder Tour依所在區域及興趣內容智慧推薦活動景點及好康優惠，讓顧客不錯失任何資訊，吸引親臨現場體驗。</p>
+<h3 id="2-個人體驗，專屬您的服務！"><a href="#2-個人體驗，專屬您的服務！" class="headerlink" title="2 個人體驗，專屬您的服務！"></a>2 個人體驗，專屬您的服務！</h3><p>Wonder Tour如同隨身導遊帶領顧客探索園區每個角落。虛擬體驗、語音導覽、擴增實境等科技，創造顧客有感體驗。</p>
+<h3 id="3-互動樂趣，增加遊客記憶！"><a href="#3-互動樂趣，增加遊客記憶！" class="headerlink" title="3 互動樂趣，增加遊客記憶！"></a>3 互動樂趣，增加遊客記憶！</h3><p>結合園區互動看板提供DIY體驗、互動射飛鏢、限時搖金幣、闖關集章拿優惠…等趣味遊戲，園區好玩到停不了！</p>
+<h3 id="4-行動消費，立馬線上訂購！"><a href="#4-行動消費，立馬線上訂購！" class="headerlink" title="4 行動消費，立馬線上訂購！"></a>4 行動消費，立馬線上訂購！</h3><p>Wonder Tour 24hr線上不打烊，蒐集全台商品資訊，讓顧客不限時空限制、盡情shopping！結合社群登入、線上金流，輕鬆購物很便利。</p>
+<h3 id="5-商務分析，掌握消費行為！"><a href="#5-商務分析，掌握消費行為！" class="headerlink" title="5 商務分析，掌握消費行為！"></a>5 商務分析，掌握消費行為！</h3><p>蒐集社群平台及園區顧客行為流程，發掘潛在客戶及商機，瞭解熱門度及顧客商品喜好。懂得消費者行為，才能搶佔商機。</p>
+<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
+<li>Microsoft Azure：雲端服務</li>
+<li>SQL Project 資料庫專案</li>
+<li>WebAPI</li>
+</ul>
+]]></content>
+      <categories>
+        <category>作品集</category>
+      </categories>
   </entry>
 </search>
