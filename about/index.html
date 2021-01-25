@@ -242,7 +242,7 @@
 <li>學歷：國立中興大學-資訊工程學系</li>
 <li>手機：0921792281</li>
 <li>Line：0921792281</li>
-<li>Email：<a href="mailto:&#x74;&#114;&#x6f;&#106;&#97;&#x6e;&#x68;&#111;&#114;&#115;&#101;&#48;&#48;&#55;&#55;&#x40;&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#109;">&#x74;&#114;&#x6f;&#106;&#97;&#x6e;&#x68;&#111;&#114;&#115;&#101;&#48;&#48;&#55;&#55;&#x40;&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#109;</a></li>
+<li>Email：<a href="mailto:&#x74;&#x72;&#111;&#106;&#97;&#110;&#104;&#111;&#114;&#x73;&#101;&#48;&#x30;&#55;&#x37;&#x40;&#x67;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;">&#x74;&#x72;&#111;&#106;&#97;&#110;&#104;&#111;&#114;&#x73;&#101;&#48;&#x30;&#55;&#x37;&#x40;&#x67;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;</a></li>
 <li>Telegram：nicktien</li>
 <li>現居地：彰化</li>
 <li>期望職位：Java 工程師 / .Net工程師</li>
@@ -379,6 +379,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -679,6 +680,26 @@ window.addEventListener('pjax:success', () => {
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '351ccd8b521e40daa3d0',
+      clientSecret: '84b147051e442954558eb467c51282c84005c74b',
+      repo        : 'nicktien007.github.io',
+      owner       : 'nicktien007',
+      admin       : ['nicktien007'],
+      id          : '3be7aa98d992907175cbd79c194399f2',
+        language: 'zh-TW',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
     </div>
 </body>
