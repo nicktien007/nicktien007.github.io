@@ -241,7 +241,28 @@
                 </span>
             </span>
 
-          <br>
+          
+            <span id="/sideproject/20170509/962250387/" class="post-meta-item leancloud_visitors" data-flag-title="行政院農業委員會水土保持局農村風情網-銀髮版" title="閱讀次數">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">閱讀次數：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/sideproject/20170509/962250387/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/sideproject/20170509/962250387/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
             <span class="post-meta-item" title="文章字數">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -310,7 +331,7 @@
 
           </div>
           
-    <div class="comments" id="gitalk-container"></div>
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -612,23 +633,32 @@ window.addEventListener('pjax:success', () => {
 
   
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
 <script>
-NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID    : '351ccd8b521e40daa3d0',
-      clientSecret: '84b147051e442954558eb467c51282c84005c74b',
-      repo        : 'nicktien007.github.io',
-      owner       : 'nicktien007',
-      admin       : ['nicktien007'],
-      id          : '43f97bd8920cddd978c1224e009cedc4',
-        language: 'zh-TW',
-      distractionFreeMode: true
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = '暱稱,郵箱,網址(http://)';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
     });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'pjA02uKgAjL2CRzftK1FCI0P-MdYXbMMI',
+      appKey     : 'T4FxkgVpgo8Pm64TAQ9Bu0DF',
+      placeholder: "go go go ~",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-tw' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
 });
 </script>
 
