@@ -159,7 +159,7 @@
   </entry>
   <entry>
     <title>常用Git 指令</title>
-    <url>/%E6%8A%80%E8%A1%93%E6%96%87%E4%BB%B6/20210125/2237860706/</url>
+    <url>/techdoc/20210125/2237860706/</url>
     <content><![CDATA[<h2 id="Git-基礎架構"><a href="#Git-基礎架構" class="headerlink" title="Git 基礎架構"></a>Git 基礎架構</h2><p><img src="https://i.imgur.com/sYRriVZ.png"></p>
 <h2 id="Git-基礎指令"><a href="#Git-基礎指令" class="headerlink" title="Git 基礎指令"></a>Git 基礎指令</h2><ul>
 <li>查看版本： <code>git --version</code></li>
