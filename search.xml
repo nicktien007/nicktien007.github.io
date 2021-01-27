@@ -15,6 +15,23 @@
       </categories>
   </entry>
   <entry>
+    <title>2017 未來商務展</title>
+    <url>/sideproject/20170818/2468639948/</url>
+    <content><![CDATA[<p><img src="/images/img-26.png"></p>
+<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
+<li>Google OAuth 2.0 登錄</li>
+<li>FullCalendar</li>
+<li>Api介接同步資料</li>
+</ul>
+]]></content>
+      <categories>
+        <category>作品集</category>
+      </categories>
+      <tags>
+        <tag>入口網</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>WONDER TOUR智慧體驗旅遊平台</title>
     <url>/sideproject/20171121/2030370342/</url>
     <content><![CDATA[<p><img src="/images/img-29.png"></p>
@@ -32,23 +49,6 @@
       <categories>
         <category>作品集</category>
       </categories>
-  </entry>
-  <entry>
-    <title>2017 未來商務展</title>
-    <url>/sideproject/20170818/2468639948/</url>
-    <content><![CDATA[<p><img src="/images/img-26.png"></p>
-<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
-<li>Google OAuth 2.0 登錄</li>
-<li>FullCalendar</li>
-<li>Api介接同步資料</li>
-</ul>
-]]></content>
-      <categories>
-        <category>作品集</category>
-      </categories>
-      <tags>
-        <tag>入口網</tag>
-      </tags>
   </entry>
   <entry>
     <title>冠恆聯合會計師事務所入口網</title>
@@ -90,6 +90,25 @@
       </categories>
   </entry>
   <entry>
+    <title>內政部公有土地管理地理資訊系統</title>
+    <url>/sideproject/20160328/2941290366/</url>
+    <content><![CDATA[<p><img src="/images/img-13.png"></p>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>內政部(以下簡稱 貴部) 鑑於各縣市政府對於地理資訊應用系統需求殷切，所需系統功能或有類似情形，為避免重複建置，爰考量規劃及開發有關縣市政府為民服務及施政輔助之共通性地理資訊應用系統，俾利節省公帑並彰顯國土資訊系統推動成效。本案包含「都市計畫土地使用分區查詢及核發資訊系統」(以下簡稱分區系統)及「公有土地管理地理資訊系統」(以下簡稱公地系統)2個資訊系統， 貴部於99及100年度委由巨鷗科技股份有限公司分別開發供縣市政府使用。其中分區系統99年提供桃園縣及新竹縣政府使用，100年度提供彰化縣及雲林縣政府使用，101年度進一步提供澎湖縣政府使用;公地系統100年度提供彰化縣及南投縣政府使用，102年度則提供嘉義市政府與屏東縣政府使用，103年度亦成功導入桃園縣政府與苗栗縣政府使用；考量整體分區系統推動業務權責屬 貴部營建署範疇，因此自102年起分區系統僅針對已導入縣市系統進行維護。104年規劃強化共通性地理資訊應用系統輔導及推動作業，除進行本案系統維運及推廣作業外，持續針對縣市政府提出之系統功能需求進行擴充開發。</p>
+<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
+<li>空間分析</li>
+<li>TGOS MAP API</li>
+<li>分佈七個縣市</li>
+</ul>
+]]></content>
+      <categories>
+        <category>作品集</category>
+      </categories>
+      <tags>
+        <tag>MIS</tag>
+        <tag>GIS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>國合會國際人力培訓線上報名暨管理系統</title>
     <url>/sideproject/20170921/983983372/</url>
     <content><![CDATA[<p><img src="/images/img-16.png"></p>
@@ -129,16 +148,6 @@
       </tags>
   </entry>
   <entry>
-    <title>國合會志工業務管理系統</title>
-    <url>/sideproject/20170618/610341380/</url>
-    <content><![CDATA[<p><img src="/images/img-15.png"></p>
-<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>在現行財團法人國際合作發展基金會（以下簡稱　貴會）力行興革，並訂定在2022年成為永續發展的最佳夥伴之願景下，如何有效運用人力資源實現以人力資本為主之管理模式，儼然成為　貴會首當其衝必須面對的課題；另貴會於99年7月成立人事室，業已賦予人事室（現行人力資源室）成為企業經營者策略夥伴角色之使命。鑒於前述考量，　貴會原購置之人力資源系統僅供進行初階之人力資源管理，致欲進行進階人資相關資料之整合與分析時，所產出之資料無法即時運用且錯誤甚多，且現行人力資源管理功能（系統）係由不同的三家廠商所提供，相互功能間無法有效整合，廠商管理亦增困難，因此擬依目前業務需要規劃建置新系統，以因應日益增多之人資業務，茲就系統函蓋範圍及說明如後。</p>
-]]></content>
-      <categories>
-        <category>作品集</category>
-      </categories>
-  </entry>
-  <entry>
     <title>國合會技術合作計畫管理系統</title>
     <url>/sideproject/20171221/3383621528/</url>
     <content><![CDATA[<p><img src="/images/img-18.png"></p>
@@ -156,6 +165,16 @@
       <tags>
         <tag>MIS</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>國合會志工業務管理系統</title>
+    <url>/sideproject/20170618/610341380/</url>
+    <content><![CDATA[<p><img src="/images/img-15.png"></p>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>在現行財團法人國際合作發展基金會（以下簡稱　貴會）力行興革，並訂定在2022年成為永續發展的最佳夥伴之願景下，如何有效運用人力資源實現以人力資本為主之管理模式，儼然成為　貴會首當其衝必須面對的課題；另貴會於99年7月成立人事室，業已賦予人事室（現行人力資源室）成為企業經營者策略夥伴角色之使命。鑒於前述考量，　貴會原購置之人力資源系統僅供進行初階之人力資源管理，致欲進行進階人資相關資料之整合與分析時，所產出之資料無法即時運用且錯誤甚多，且現行人力資源管理功能（系統）係由不同的三家廠商所提供，相互功能間無法有效整合，廠商管理亦增困難，因此擬依目前業務需要規劃建置新系統，以因應日益增多之人資業務，茲就系統函蓋範圍及說明如後。</p>
+]]></content>
+      <categories>
+        <category>作品集</category>
+      </categories>
   </entry>
   <entry>
     <title>常用Git 指令</title>
@@ -278,10 +297,10 @@
 <p><strong>rebase前</strong><br><img src="https://i.imgur.com/DCnfiSZ.png"></p>
 <p><strong>rebase後</strong><br><img src="https://i.imgur.com/EYpsIom.png"></p>
 <blockquote>
-<p>看起來是<code>剪下、貼上</code>，實際上是==復製、貼上==(SHA1值不一樣)</p>
+<p>看起來是<code>剪下、貼上</code>，實際上是<strong>復製、貼上</strong>(SHA1值不一樣)</p>
 </blockquote>
 <blockquote>
-<p>進階用法：<a href="https://blog.yorkxin.org/2011/07/29/git-rebase.html">https://blog.yorkxin.org/2011/07/29/git-rebase.html</a><br><a href="https://gitbook.tw/chapters/rewrite-history/change-commit-message.html">https://gitbook.tw/chapters/rewrite-history/change-commit-message.html</a></p>
+<p><a href="https://blog.yorkxin.org/2011/07/29/git-rebase.html">進階用法</a><br><a href="https://gitbook.tw/chapters/rewrite-history/change-commit-message.html">修改歷史訊息</a></p>
 </blockquote>
 <h5 id="還原方式"><a href="#還原方式" class="headerlink" title="還原方式"></a>還原方式</h5><ul>
 <li><code>git reset ORIG_HEAD --hard</code></li>
@@ -290,8 +309,8 @@
 <h4 id="cherry-pick"><a href="#cherry-pick" class="headerlink" title="cherry-pick"></a>cherry-pick</h4><blockquote>
 <p>撿別的分支的 Commit 過來合併</p>
 </blockquote>
-<p>語法：<code>git cherry-pick 編號1 編號2 編號3</code></p>
-<p>參數：**–no-commit**：撿過來但先不合併</p>
+<p>語法：<br><code>git cherry-pick 編號1 編號2 編號3</code></p>
+<p>參數：<br><code>--no-commit</code>：撿過來但先不合併</p>
 <h2 id="Git-其它狀況"><a href="#Git-其它狀況" class="headerlink" title="Git 其它狀況"></a>Git 其它狀況</h2><h3 id="做到一半，臨時要切換到別的任務"><a href="#做到一半，臨時要切換到別的任務" class="headerlink" title="做到一半，臨時要切換到別的任務"></a>做到一半，臨時要切換到別的任務</h3><blockquote>
 <p><a href="https://gitbook.tw/chapters/faq/stash.html">https://gitbook.tw/chapters/faq/stash.html</a></p>
 </blockquote>
@@ -398,6 +417,23 @@
       </tags>
   </entry>
   <entry>
+    <title>技術入口網</title>
+    <url>/sideproject/20180219/857597094/</url>
+    <content><![CDATA[<p><img src="/images/img-25.png"></p>
+<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
+<li>ELMAH 錯誤紀錄模組</li>
+<li>Editor.md 編輯器</li>
+<li>NuGet Server</li>
+</ul>
+]]></content>
+      <categories>
+        <category>作品集</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>彰化縣政府幸福企業甄選</title>
     <url>/sideproject/20171218/3450408317/</url>
     <content><![CDATA[<p><img src="/images/img-20.png"></p>
@@ -417,20 +453,22 @@
       </tags>
   </entry>
   <entry>
-    <title>技術入口網</title>
-    <url>/sideproject/20180219/857597094/</url>
-    <content><![CDATA[<p><img src="/images/img-25.png"></p>
+    <title>新北市招商資訊整合服務平臺</title>
+    <url>/sideproject/20170301/4256261148/</url>
+    <content><![CDATA[<p><img src="/images/img-10.png"></p>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>參案件辦理期程長達數十年，一般履約管理顧問服務契約係為解決興建營運初期法律及工程等問題，僅約為3-6年之專業服務，缺乏長期針對興建營運契約辦理文件及工作事項之管理，亦缺乏針對簽約企業、廠商等投資者提供案件資訊的雙向管理服務，為強化既有產經資料的應用與資源的共享，進一步提供政府與企業長期共同合作的基礎，期望建構以促進民間參與公共建設案件管理為架構，以既有資料庫為基礎的資訊管理應用服務，並建立政府與廠商間雙向服務的平臺，強化招商引資整體服務工作，以提供結合招商案件管理以及資源共享空間資訊服務平臺。</p>
+<p>本系統主要針對局內業務人員於進行招商案件管理時，對於案件從研擬、招商、議約簽約、履約、移轉返還進行全盤掌握，建立提供一套整合性招商資訊服務平台，提升促參案件管理業務之效率。</p>
 <h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
-<li>ELMAH 錯誤紀錄模組</li>
-<li>Editor.md 編輯器</li>
-<li>NuGet Server</li>
+<li>UserLog</li>
+<li>UCO/PO</li>
+<li>招商案件管理系統</li>
 </ul>
 ]]></content>
       <categories>
         <category>作品集</category>
       </categories>
       <tags>
-        <tag>markdown</tag>
+        <tag>MIS</tag>
       </tags>
   </entry>
   <entry>
@@ -453,15 +491,14 @@
       </tags>
   </entry>
   <entry>
-    <title>新北市招商資訊整合服務平臺</title>
-    <url>/sideproject/20170301/4256261148/</url>
-    <content><![CDATA[<p><img src="/images/img-10.png"></p>
-<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>參案件辦理期程長達數十年，一般履約管理顧問服務契約係為解決興建營運初期法律及工程等問題，僅約為3-6年之專業服務，缺乏長期針對興建營運契約辦理文件及工作事項之管理，亦缺乏針對簽約企業、廠商等投資者提供案件資訊的雙向管理服務，為強化既有產經資料的應用與資源的共享，進一步提供政府與企業長期共同合作的基礎，期望建構以促進民間參與公共建設案件管理為架構，以既有資料庫為基礎的資訊管理應用服務，並建立政府與廠商間雙向服務的平臺，強化招商引資整體服務工作，以提供結合招商案件管理以及資源共享空間資訊服務平臺。</p>
-<p>本系統主要針對局內業務人員於進行招商案件管理時，對於案件從研擬、招商、議約簽約、履約、移轉返還進行全盤掌握，建立提供一套整合性招商資訊服務平台，提升促參案件管理業務之效率。</p>
+    <title>水保局培根計畫人員培訓暨管考系統</title>
+    <url>/sideproject/20170225/451597171/</url>
+    <content><![CDATA[<p><img src="/images/img-19.png"></p>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>培根計畫網及培根管考系統為協助農村再生培根計畫及永續陪伴之資訊管理系統，為利培根計畫及永續陪伴作業之推動，有效管理農村社區、學員、課程及師資等資料，本計畫持續辦理系統維護及功能擴充，並強化培訓作業流程電子化服務，另外新增成果展現功能，包含歷年數據分析、團隊績效呈現等，以期作為決策參考之依據。</p>
 <h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
-<li>UserLog</li>
-<li>UCO/PO</li>
-<li>招商案件管理系統</li>
+<li>Vue 1.0</li>
+<li>運行長達10年的系統</li>
+<li>Morris.js</li>
 </ul>
 ]]></content>
       <categories>
@@ -488,6 +525,16 @@
       </categories>
   </entry>
   <entry>
+    <title>水利署104年度委辦計畫成果發表會</title>
+    <url>/sideproject/20150625/4036074347/</url>
+    <content><![CDATA[<p><img src="/images/img-6.png"></p>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>水利署於104年度辦理之水利綜合業務、水權與地層下陷防治、水資源保育、水利政策與法規、水利產業與經濟、水源開發及利用、河川海岸與區域排水、資訊與水文觀測、水利工程與災害防治等，九大類委辦計畫成果豐碩，編纂委辦計畫成果摘要彙編並辦理成果發表會，對外發表水利署104年度執行各項委辦計畫之相關成果，並冀由與會專家之討論與建議，協助水利署掌握符合時勢之水資源政策發展趨勢及其未來施政之規劃方向。</p>
+]]></content>
+      <categories>
+        <category>作品集</category>
+      </categories>
+  </entry>
+  <entry>
     <title>水保局農村再生執行及管理系統</title>
     <url>/sideproject/20170211/2820871682/</url>
     <content><![CDATA[<p><img src="/images/img-11.png"></p>
@@ -498,35 +545,6 @@
 <li>ADO.NET：EDMX</li>
 <li>採用UCO/PO架構</li>
 </ul>
-]]></content>
-      <categories>
-        <category>作品集</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>內政部公有土地管理地理資訊系統</title>
-    <url>/sideproject/20160328/2941290366/</url>
-    <content><![CDATA[<p><img src="/images/img-13.png"></p>
-<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>內政部(以下簡稱 貴部) 鑑於各縣市政府對於地理資訊應用系統需求殷切，所需系統功能或有類似情形，為避免重複建置，爰考量規劃及開發有關縣市政府為民服務及施政輔助之共通性地理資訊應用系統，俾利節省公帑並彰顯國土資訊系統推動成效。本案包含「都市計畫土地使用分區查詢及核發資訊系統」(以下簡稱分區系統)及「公有土地管理地理資訊系統」(以下簡稱公地系統)2個資訊系統， 貴部於99及100年度委由巨鷗科技股份有限公司分別開發供縣市政府使用。其中分區系統99年提供桃園縣及新竹縣政府使用，100年度提供彰化縣及雲林縣政府使用，101年度進一步提供澎湖縣政府使用;公地系統100年度提供彰化縣及南投縣政府使用，102年度則提供嘉義市政府與屏東縣政府使用，103年度亦成功導入桃園縣政府與苗栗縣政府使用；考量整體分區系統推動業務權責屬 貴部營建署範疇，因此自102年起分區系統僅針對已導入縣市系統進行維護。104年規劃強化共通性地理資訊應用系統輔導及推動作業，除進行本案系統維運及推廣作業外，持續針對縣市政府提出之系統功能需求進行擴充開發。</p>
-<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
-<li>空間分析</li>
-<li>TGOS MAP API</li>
-<li>分佈七個縣市</li>
-</ul>
-]]></content>
-      <categories>
-        <category>作品集</category>
-      </categories>
-      <tags>
-        <tag>MIS</tag>
-        <tag>GIS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>水利署104年度委辦計畫成果發表會</title>
-    <url>/sideproject/20150625/4036074347/</url>
-    <content><![CDATA[<p><img src="/images/img-6.png"></p>
-<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>水利署於104年度辦理之水利綜合業務、水權與地層下陷防治、水資源保育、水利政策與法規、水利產業與經濟、水源開發及利用、河川海岸與區域排水、資訊與水文觀測、水利工程與災害防治等，九大類委辦計畫成果豐碩，編纂委辦計畫成果摘要彙編並辦理成果發表會，對外發表水利署104年度執行各項委辦計畫之相關成果，並冀由與會專家之討論與建議，協助水利署掌握符合時勢之水資源政策發展趨勢及其未來施政之規劃方向。</p>
 ]]></content>
       <categories>
         <category>作品集</category>
@@ -551,6 +569,24 @@
       <categories>
         <category>作品集</category>
       </categories>
+  </entry>
+  <entry>
+    <title>行政院農業委員會水土保持局農村風情網</title>
+    <url>/sideproject/20180321/3083123936/</url>
+    <content><![CDATA[<p><img src="/images/img-23.png"></p>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>行政院農業委員會水土保持局於94年度開始蒐集建置農村資訊平台， 103年度農村風情網營運服務主要包括入口網、行動版、兒童版、銀髮版、農村好讚等多元網站，目前網頁內容主要包含「訊息快遞」、「幸福農村」、「農村鮮本團隊貨通」、「農村部落格」、「在地心感動」、「農村行腳」及「農村典藏」等項目，在既有web網站架構下，本年度推動重點以強化農村第一站（農村入口網）、資訊動態有效管理、強化網頁互動資訊管理、加強社群互動討論、農村產業行銷推廣、更新上傳等功能，以吸引更多民眾認識農村、體驗農村、喜愛農村。</p>
+<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
+<li>文字編輯器：ckeditor</li>
+<li>多種版本</li>
+<li>五層式架構 </li>
+</ul>
+]]></content>
+      <categories>
+        <category>作品集</category>
+      </categories>
+      <tags>
+        <tag>入口網</tag>
+      </tags>
   </entry>
   <entry>
     <title>臺南市政府開放資料平台</title>
@@ -589,24 +625,6 @@
       </tags>
   </entry>
   <entry>
-    <title>行政院農業委員會水土保持局農村風情網</title>
-    <url>/sideproject/20180321/3083123936/</url>
-    <content><![CDATA[<p><img src="/images/img-23.png"></p>
-<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>行政院農業委員會水土保持局於94年度開始蒐集建置農村資訊平台， 103年度農村風情網營運服務主要包括入口網、行動版、兒童版、銀髮版、農村好讚等多元網站，目前網頁內容主要包含「訊息快遞」、「幸福農村」、「農村鮮本團隊貨通」、「農村部落格」、「在地心感動」、「農村行腳」及「農村典藏」等項目，在既有web網站架構下，本年度推動重點以強化農村第一站（農村入口網）、資訊動態有效管理、強化網頁互動資訊管理、加強社群互動討論、農村產業行銷推廣、更新上傳等功能，以吸引更多民眾認識農村、體驗農村、喜愛農村。</p>
-<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
-<li>文字編輯器：ckeditor</li>
-<li>多種版本</li>
-<li>五層式架構 </li>
-</ul>
-]]></content>
-      <categories>
-        <category>作品集</category>
-      </categories>
-      <tags>
-        <tag>入口網</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>高雄市工廠空間地理資訊系統</title>
     <url>/sideproject/20180419/4173232934/</url>
     <content><![CDATA[<p><img src="/images/img-27.png"></p>
@@ -624,24 +642,6 @@
       <tags>
         <tag>MIS</tag>
         <tag>GIS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>水保局培根計畫人員培訓暨管考系統</title>
-    <url>/sideproject/20170225/451597171/</url>
-    <content><![CDATA[<p><img src="/images/img-19.png"></p>
-<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>培根計畫網及培根管考系統為協助農村再生培根計畫及永續陪伴之資訊管理系統，為利培根計畫及永續陪伴作業之推動，有效管理農村社區、學員、課程及師資等資料，本計畫持續辦理系統維護及功能擴充，並強化培訓作業流程電子化服務，另外新增成果展現功能，包含歷年數據分析、團隊績效呈現等，以期作為決策參考之依據。</p>
-<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
-<li>Vue 1.0</li>
-<li>運行長達10年的系統</li>
-<li>Morris.js</li>
-</ul>
-]]></content>
-      <categories>
-        <category>作品集</category>
-      </categories>
-      <tags>
-        <tag>MIS</tag>
       </tags>
   </entry>
 </search>
