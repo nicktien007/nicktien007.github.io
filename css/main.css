@@ -1273,7 +1273,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffadff;
+  background: #2d87b5;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2765,19 +2765,18 @@ ul.breadcrumb li + li:last-child {
     margin: 8px 0 0;
   }
 }
-code {
-  color: #c7254e;
-  background: #f9f2f4;
-  margin: 2px;
+/* 自定義短code樣式 */
+/* code {
+    color: #c7254e; //文字顏色
+    background: #f9f2f4; //底色
+    margin: 2px;
+} */
+/* 短code邊框的自定義樣式 */
+/* .highlight, pre {
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 3px;
 }
-.highlight,
-pre {
-  margin: 5px 0;
-  padding: 5px;
-  border-radius: 3px;
-}
-.highlight,
-code,
-pre {
-  border: 1px solid #d6d6d6;
-}
+.highlight, code, pre {
+    border: 1px solid #d6d6d6;
+} */
