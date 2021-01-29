@@ -51,25 +51,6 @@
       </categories>
   </entry>
   <entry>
-    <title>內政部公有土地管理地理資訊系統</title>
-    <url>/sideproject/20160328/2941290366/</url>
-    <content><![CDATA[<p><img src="/images/img-13.png"></p>
-<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>內政部(以下簡稱 貴部) 鑑於各縣市政府對於地理資訊應用系統需求殷切，所需系統功能或有類似情形，為避免重複建置，爰考量規劃及開發有關縣市政府為民服務及施政輔助之共通性地理資訊應用系統，俾利節省公帑並彰顯國土資訊系統推動成效。本案包含「都市計畫土地使用分區查詢及核發資訊系統」(以下簡稱分區系統)及「公有土地管理地理資訊系統」(以下簡稱公地系統)2個資訊系統， 貴部於99及100年度委由巨鷗科技股份有限公司分別開發供縣市政府使用。其中分區系統99年提供桃園縣及新竹縣政府使用，100年度提供彰化縣及雲林縣政府使用，101年度進一步提供澎湖縣政府使用;公地系統100年度提供彰化縣及南投縣政府使用，102年度則提供嘉義市政府與屏東縣政府使用，103年度亦成功導入桃園縣政府與苗栗縣政府使用；考量整體分區系統推動業務權責屬 貴部營建署範疇，因此自102年起分區系統僅針對已導入縣市系統進行維護。104年規劃強化共通性地理資訊應用系統輔導及推動作業，除進行本案系統維運及推廣作業外，持續針對縣市政府提出之系統功能需求進行擴充開發。</p>
-<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
-<li>空間分析</li>
-<li>TGOS MAP API</li>
-<li>分佈七個縣市</li>
-</ul>
-]]></content>
-      <categories>
-        <category>作品集</category>
-      </categories>
-      <tags>
-        <tag>MIS</tag>
-        <tag>GIS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>冠恆聯合會計師事務所入口網</title>
     <url>/sideproject/20130521/1120241658/</url>
     <content><![CDATA[<p><img src="/images/img-14.png"></p>
@@ -93,6 +74,25 @@
       </categories>
       <tags>
         <tag>入口網</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>內政部公有土地管理地理資訊系統</title>
+    <url>/sideproject/20160328/2941290366/</url>
+    <content><![CDATA[<p><img src="/images/img-13.png"></p>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>內政部(以下簡稱 貴部) 鑑於各縣市政府對於地理資訊應用系統需求殷切，所需系統功能或有類似情形，為避免重複建置，爰考量規劃及開發有關縣市政府為民服務及施政輔助之共通性地理資訊應用系統，俾利節省公帑並彰顯國土資訊系統推動成效。本案包含「都市計畫土地使用分區查詢及核發資訊系統」(以下簡稱分區系統)及「公有土地管理地理資訊系統」(以下簡稱公地系統)2個資訊系統， 貴部於99及100年度委由巨鷗科技股份有限公司分別開發供縣市政府使用。其中分區系統99年提供桃園縣及新竹縣政府使用，100年度提供彰化縣及雲林縣政府使用，101年度進一步提供澎湖縣政府使用;公地系統100年度提供彰化縣及南投縣政府使用，102年度則提供嘉義市政府與屏東縣政府使用，103年度亦成功導入桃園縣政府與苗栗縣政府使用；考量整體分區系統推動業務權責屬 貴部營建署範疇，因此自102年起分區系統僅針對已導入縣市系統進行維護。104年規劃強化共通性地理資訊應用系統輔導及推動作業，除進行本案系統維運及推廣作業外，持續針對縣市政府提出之系統功能需求進行擴充開發。</p>
+<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
+<li>空間分析</li>
+<li>TGOS MAP API</li>
+<li>分佈七個縣市</li>
+</ul>
+]]></content>
+      <categories>
+        <category>作品集</category>
+      </categories>
+      <tags>
+        <tag>MIS</tag>
+        <tag>GIS</tag>
       </tags>
   </entry>
   <entry>
@@ -148,6 +148,16 @@
       </tags>
   </entry>
   <entry>
+    <title>國合會志工業務管理系統</title>
+    <url>/sideproject/20170618/610341380/</url>
+    <content><![CDATA[<p><img src="/images/img-15.png"></p>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>在現行財團法人國際合作發展基金會（以下簡稱　貴會）力行興革，並訂定在2022年成為永續發展的最佳夥伴之願景下，如何有效運用人力資源實現以人力資本為主之管理模式，儼然成為　貴會首當其衝必須面對的課題；另貴會於99年7月成立人事室，業已賦予人事室（現行人力資源室）成為企業經營者策略夥伴角色之使命。鑒於前述考量，　貴會原購置之人力資源系統僅供進行初階之人力資源管理，致欲進行進階人資相關資料之整合與分析時，所產出之資料無法即時運用且錯誤甚多，且現行人力資源管理功能（系統）係由不同的三家廠商所提供，相互功能間無法有效整合，廠商管理亦增困難，因此擬依目前業務需要規劃建置新系統，以因應日益增多之人資業務，茲就系統函蓋範圍及說明如後。</p>
+]]></content>
+      <categories>
+        <category>作品集</category>
+      </categories>
+  </entry>
+  <entry>
     <title>國合會技術合作計畫管理系統</title>
     <url>/sideproject/20171221/3383621528/</url>
     <content><![CDATA[<p><img src="/images/img-18.png"></p>
@@ -165,16 +175,6 @@
       <tags>
         <tag>MIS</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>國合會志工業務管理系統</title>
-    <url>/sideproject/20170618/610341380/</url>
-    <content><![CDATA[<p><img src="/images/img-15.png"></p>
-<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>在現行財團法人國際合作發展基金會（以下簡稱　貴會）力行興革，並訂定在2022年成為永續發展的最佳夥伴之願景下，如何有效運用人力資源實現以人力資本為主之管理模式，儼然成為　貴會首當其衝必須面對的課題；另貴會於99年7月成立人事室，業已賦予人事室（現行人力資源室）成為企業經營者策略夥伴角色之使命。鑒於前述考量，　貴會原購置之人力資源系統僅供進行初階之人力資源管理，致欲進行進階人資相關資料之整合與分析時，所產出之資料無法即時運用且錯誤甚多，且現行人力資源管理功能（系統）係由不同的三家廠商所提供，相互功能間無法有效整合，廠商管理亦增困難，因此擬依目前業務需要規劃建置新系統，以因應日益增多之人資業務，茲就系統函蓋範圍及說明如後。</p>
-]]></content>
-      <categories>
-        <category>作品集</category>
-      </categories>
   </entry>
   <entry>
     <title>常用Git 指令</title>
@@ -436,23 +436,6 @@
       </tags>
   </entry>
   <entry>
-    <title>技術入口網</title>
-    <url>/sideproject/20180219/857597094/</url>
-    <content><![CDATA[<p><img src="/images/img-25.png"></p>
-<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
-<li>ELMAH 錯誤紀錄模組</li>
-<li>Editor.md 編輯器</li>
-<li>NuGet Server</li>
-</ul>
-]]></content>
-      <categories>
-        <category>作品集</category>
-      </categories>
-      <tags>
-        <tag>markdown</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>新北市工廠空間資訊管理系統</title>
     <url>/sideproject/20170315/3114996799/</url>
     <content><![CDATA[<p><img src="/images/img-9.png"></p>
@@ -469,6 +452,23 @@
       </categories>
       <tags>
         <tag>MIS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>技術入口網</title>
+    <url>/sideproject/20180219/857597094/</url>
+    <content><![CDATA[<p><img src="/images/img-25.png"></p>
+<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
+<li>ELMAH 錯誤紀錄模組</li>
+<li>Editor.md 編輯器</li>
+<li>NuGet Server</li>
+</ul>
+]]></content>
+      <categories>
+        <category>作品集</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -491,6 +491,85 @@
       </tags>
   </entry>
   <entry>
+    <title>棋牌對戰 Game Server開發</title>
+    <url>/sideproject/20210129/625696656/</url>
+    <content><![CDATA[<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/qvejjHk.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/098KPOY.png"></div></div></div></div>
+
+
+<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
+<li>CQ9 第一款棋牌對戰遊戲</li>
+<li>負責項目：<ul>
+<li>Server架構</li>
+<li>後端開發</li>
+<li>協議</li>
+</ul>
+</li>
+<li>採用 .NET Core 3 開發</li>
+<li>採用主流的遊戲架構：<strong>ECS架構</strong>(Entity-Component-System)</li>
+<li>協議採用 Google Protobuf</li>
+<li>後期進行 <strong>NuGet 模組化</strong>，開發遊戲超 Easy !!</li>
+</ul>
+<h2 id="GameServer-架構"><a href="#GameServer-架構" class="headerlink" title="GameServer 架構"></a>GameServer 架構</h2><h2 id="架構圖"><a href="#架構圖" class="headerlink" title="架構圖"></a>架構圖</h2><p><img src="https://i.imgur.com/iRrJmLi.png"></p>
+<h2 id="基礎元件介紹"><a href="#基礎元件介紹" class="headerlink" title="基礎元件介紹"></a>基礎元件介紹</h2><h3 id="Game"><a href="#Game" class="headerlink" title="Game"></a>Game</h3><ul>
+<li>頂層類別，主要包含<code>Scene</code>、<code>EventSystem</code></li>
+</ul>
+<h3 id="Componet"><a href="#Componet" class="headerlink" title="Componet"></a>Componet</h3><ul>
+<li>框架裡萬物皆是<code>Componet</code></li>
+<li>建構子會調用<code>IdGenerator類</code>產生唯一的 Id</li>
+<li>繼承<code>IDisposable</code>，在調用Dispose後會被ObjectPool 回收</li>
+</ul>
+<h3 id="ComponentWithId"><a href="#ComponentWithId" class="headerlink" title="ComponentWithId"></a>ComponentWithId</h3><ul>
+<li>繼承 Componet  </li>
+<li>使用指定 Id創建 Componet</li>
+</ul>
+<h3 id="Entity"><a href="#Entity" class="headerlink" title="Entity"></a>Entity</h3><ul>
+<li>可以<code>掛載</code> Componet</li>
+<li>繼承 <code>ComponentWithId</code></li>
+</ul>
+<blockquote>
+<p>以上皆使用<code>ComponentFactory</code> 靜態類別創建</p>
+</blockquote>
+<h3 id="Scene"><a href="#Scene" class="headerlink" title="Scene"></a>Scene</h3><ul>
+<li>重要的單例實體</li>
+<li>繼承 Entity 類，包含的 component代表了服務端進程能提供的基礎功能集合</li>
+</ul>
+<h3 id="EventSystem"><a href="#EventSystem" class="headerlink" title="EventSystem"></a>EventSystem</h3><ul>
+<li>單例實體</li>
+<li>在component 創建時，註冊事件到相對應的列表</li>
+<li>主要事件介面<ul>
+<li>IAwake</li>
+<li>IStart</li>
+<li>IDestroy</li>
+<li>ILoad</li>
+<li>IUpdate</li>
+<li>ILateUpdate</li>
+<li>IChange</li>
+<li>IDeserialize</li>
+</ul>
+</li>
+</ul>
+<h2 id="運作流程"><a href="#運作流程" class="headerlink" title="運作流程"></a>運作流程</h2><div class="note success">
+            <p>框架並自定義一個<code>OneThreadSynchronizationContext</code>類，在有異步回調到來的時候保存delegate和參數到一個多線安全的Queue，然後一個While True 迴圈不停調用<code>OneThreadSynchronizationContext.Update</code>，在主線程中取出本次主循環產生的所有異步回調，從而保證了所有的回調函數都被捕捉到單一主線程執行。</p>
+          </div>
+
+<p><strong><span class="label success"> 該框架進入點為`app.proj` 裡面只有一個帶 main的program類型，啟動之後主要分以下四個流程</span></strong></p>
+<h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>首先註冊 Model程序集中提供的各種基礎 Model類，隨後加載 Hotfix中可以熱更新的類型並且註冊到<code>EventSystem</code>。一方面是提供IAwake、ILoad、IUpdate 等等介面中的事件處理，一方面檢索各類 Attribute並且註冊到相應容器中以便後續查找。</p>
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>載入<code>OpcodeTypeComponent</code>和<code>MessageDispatherComponent</code>提供Server 端進程相應網絡消息回調的功能，後需章節會繼續介紹。</p>
+<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>隨後是根據本身的 appType添加自身需要的Component，後需章節會繼續介紹</p>
+<h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><p>進入Sever 主循環：每此循環休息1ms，處理發生的異步回調；並處理各種Compont的update事件。</p>
+]]></content>
+      <categories>
+        <category>作品集</category>
+      </categories>
+      <tags>
+        <tag>GameServer</tag>
+        <tag>棋牌對戰</tag>
+        <tag>.net Core</tag>
+        <tag>Google Protobuf</tag>
+        <tag>Nuget</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>水保局105年度水土保持公共工程技術品質提升計畫</title>
     <url>/sideproject/20160526/3406392346/</url>
     <content><![CDATA[<p><img src="/images/img-8.png"></p>
@@ -507,10 +586,16 @@
       </categories>
   </entry>
   <entry>
-    <title>水利署104年度委辦計畫成果發表會</title>
-    <url>/sideproject/20150625/4036074347/</url>
-    <content><![CDATA[<p><img src="/images/img-6.png"></p>
-<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>水利署於104年度辦理之水利綜合業務、水權與地層下陷防治、水資源保育、水利政策與法規、水利產業與經濟、水源開發及利用、河川海岸與區域排水、資訊與水文觀測、水利工程與災害防治等，九大類委辦計畫成果豐碩，編纂委辦計畫成果摘要彙編並辦理成果發表會，對外發表水利署104年度執行各項委辦計畫之相關成果，並冀由與會專家之討論與建議，協助水利署掌握符合時勢之水資源政策發展趨勢及其未來施政之規劃方向。</p>
+    <title>水保局農村再生執行及管理系統</title>
+    <url>/sideproject/20170211/2820871682/</url>
+    <content><![CDATA[<p><img src="/images/img-11.png"></p>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>我國為促進農村活化再生，提升農村整體發展，恢復農村 居民在地居住尊嚴，以達建設富麗新農村之目標，將推動農村 再生列為重要之課題。為推動農村再生並執行農村再生條例與 農村再生計畫，特建置『農村再生執行及管理系統』，供農村 再生執行計畫之工程執行情形、施工進度、相關管理維護、品 質管理監督、三級品管品質文件推廣展示及會計相關作業等， 首創以一站式電子化方式統合管理農村再生工程、品質、會計 和文件等作業流程，使用對象包含水保局、六大分局、縣市政 府、鄉鎮公所及委外廠商等業務角色，以利農村再生工程順利 執行完成，達成農村再生計畫願景。</p>
+<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
+<li>單一登錄(SSO)</li>
+<li>大量使用Stored Procedure</li>
+<li>ADO.NET：EDMX</li>
+<li>採用UCO/PO架構</li>
+</ul>
 ]]></content>
       <categories>
         <category>作品集</category>
@@ -545,16 +630,10 @@
       </categories>
   </entry>
   <entry>
-    <title>水保局農村再生執行及管理系統</title>
-    <url>/sideproject/20170211/2820871682/</url>
-    <content><![CDATA[<p><img src="/images/img-11.png"></p>
-<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>我國為促進農村活化再生，提升農村整體發展，恢復農村 居民在地居住尊嚴，以達建設富麗新農村之目標，將推動農村 再生列為重要之課題。為推動農村再生並執行農村再生條例與 農村再生計畫，特建置『農村再生執行及管理系統』，供農村 再生執行計畫之工程執行情形、施工進度、相關管理維護、品 質管理監督、三級品管品質文件推廣展示及會計相關作業等， 首創以一站式電子化方式統合管理農村再生工程、品質、會計 和文件等作業流程，使用對象包含水保局、六大分局、縣市政 府、鄉鎮公所及委外廠商等業務角色，以利農村再生工程順利 執行完成，達成農村再生計畫願景。</p>
-<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
-<li>單一登錄(SSO)</li>
-<li>大量使用Stored Procedure</li>
-<li>ADO.NET：EDMX</li>
-<li>採用UCO/PO架構</li>
-</ul>
+    <title>水利署104年度委辦計畫成果發表會</title>
+    <url>/sideproject/20150625/4036074347/</url>
+    <content><![CDATA[<p><img src="/images/img-6.png"></p>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>水利署於104年度辦理之水利綜合業務、水權與地層下陷防治、水資源保育、水利政策與法規、水利產業與經濟、水源開發及利用、河川海岸與區域排水、資訊與水文觀測、水利工程與災害防治等，九大類委辦計畫成果豐碩，編纂委辦計畫成果摘要彙編並辦理成果發表會，對外發表水利署104年度執行各項委辦計畫之相關成果，並冀由與會專家之討論與建議，協助水利署掌握符合時勢之水資源政策發展趨勢及其未來施政之規劃方向。</p>
 ]]></content>
       <categories>
         <category>作品集</category>
@@ -569,6 +648,24 @@
       <categories>
         <category>作品集</category>
       </categories>
+  </entry>
+  <entry>
+    <title>行政院農業委員會水土保持局農村風情網-銀髮版</title>
+    <url>/sideproject/20170509/962250387/</url>
+    <content><![CDATA[<p><img src="/images/img-22.png"></p>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>行政院農業委員會水土保持局於94年度開始蒐集建置農村資訊平台， 103年度農村風情網營運服務主要包括入口網、行動版、兒童版、銀髮版、農村好讚等多元網站，目前網頁內容主要包含「訊息快遞」、「幸福農村」、「農村鮮本團隊貨通」、「農村部落格」、「在地心感動」、「農村行腳」及「農村典藏」等項目，在既有web網站架構下，本年度推動重點以強化農村第一站（農村入口網）、資訊動態有效管理、強化網頁互動資訊管理、加強社群互動討論、農村產業行銷推廣、更新上傳等功能，以吸引更多民眾認識農村、體驗農村、喜愛農村。</p>
+<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
+<li>即時語音 ITRI TTS</li>
+<li>實作 OData API</li>
+<li>handlebars.js</li>
+</ul>
+]]></content>
+      <categories>
+        <category>作品集</category>
+      </categories>
+      <tags>
+        <tag>入口網</tag>
+      </tags>
   </entry>
   <entry>
     <title>臺南市政府開放資料平台</title>
@@ -597,24 +694,6 @@
 <li>文字編輯器：ckeditor</li>
 <li>多種版本</li>
 <li>五層式架構 </li>
-</ul>
-]]></content>
-      <categories>
-        <category>作品集</category>
-      </categories>
-      <tags>
-        <tag>入口網</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>行政院農業委員會水土保持局農村風情網-銀髮版</title>
-    <url>/sideproject/20170509/962250387/</url>
-    <content><![CDATA[<p><img src="/images/img-22.png"></p>
-<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>行政院農業委員會水土保持局於94年度開始蒐集建置農村資訊平台， 103年度農村風情網營運服務主要包括入口網、行動版、兒童版、銀髮版、農村好讚等多元網站，目前網頁內容主要包含「訊息快遞」、「幸福農村」、「農村鮮本團隊貨通」、「農村部落格」、「在地心感動」、「農村行腳」及「農村典藏」等項目，在既有web網站架構下，本年度推動重點以強化農村第一站（農村入口網）、資訊動態有效管理、強化網頁互動資訊管理、加強社群互動討論、農村產業行銷推廣、更新上傳等功能，以吸引更多民眾認識農村、體驗農村、喜愛農村。</p>
-<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
-<li>即時語音 ITRI TTS</li>
-<li>實作 OData API</li>
-<li>handlebars.js</li>
 </ul>
 ]]></content>
       <categories>
