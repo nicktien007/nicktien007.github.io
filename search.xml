@@ -51,32 +51,6 @@
       </categories>
   </entry>
   <entry>
-    <title>冠恆聯合會計師事務所入口網</title>
-    <url>/sideproject/20130521/1120241658/</url>
-    <content><![CDATA[<p><img src="/images/img-14.png"></p>
-<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>2013年度與華奧博岩配合之網站建置案，包括切版、網站前後台開發、移機及管理教學等服務。</p>
-<ul>
-<li>日誠網站</li>
-<li>加好網站</li>
-<li>利欣網站</li>
-<li>睦茗網站</li>
-<li>冠恆網站</li>
-</ul>
-<p>以產品化思維建構Smart Portal模組，並利用合作案例網站開發為基礎，逐步完善產品架構，進而拓展企業形象網服務之業務範疇，降低開發成本。</p>
-<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
-<li>ASP.NET MVC 4</li>
-<li>多國語言</li>
-<li>前後台畫面共用</li>
-</ul>
-]]></content>
-      <categories>
-        <category>作品集</category>
-      </categories>
-      <tags>
-        <tag>入口網</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>內政部公有土地管理地理資訊系統</title>
     <url>/sideproject/20160328/2941290366/</url>
     <content><![CDATA[<p><img src="/images/img-13.png"></p>
@@ -109,23 +83,29 @@
       </categories>
   </entry>
   <entry>
-    <title>國合會國際人力培訓線上報名暨管理系統</title>
-    <url>/sideproject/20170921/983983372/</url>
-    <content><![CDATA[<p><img src="/images/img-16.png"></p>
-<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>財團法人國際合作發展基金會自1998年開始，以「台灣特有之經濟發展經驗」協助培訓開發中國家政府之中、高階官員及非政府組織人員，研習領域可分為經濟貿易、農業技術、水產漁業、社區發展、科技管理、中小企業、觀光產業等主題。</p>
-<p>為便利研習班相關資料管理，於2001年完成「國際人力資源培訓管理系統開發建置案」(採購案號：ICDF-2001-013)，原始設計架構著重研習班相關資料儲存管理，系統使用至今，期間為因應本會研習班業務需求，曾進行系統功能擴充(如：關鍵字查詢、統計分析功能等)，財團法人國際合作發展基金會為將系統整合現今知識管理平台，擬依目前業務需要規劃建置新系統，進行新舊系統資料轉換，另鑒於上(99)年度嘗試獎學金計畫報名系統成效良好，且為因應日益增加之報名人數，建置線上報名功能，由駐外館/處/駐團統一進行初審及提報作業，以節省紙張及相關行政作業。</p>
+    <title>冠恆聯合會計師事務所入口網</title>
+    <url>/sideproject/20130521/1120241658/</url>
+    <content><![CDATA[<p><img src="/images/img-14.png"></p>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>2013年度與華奧博岩配合之網站建置案，包括切版、網站前後台開發、移機及管理教學等服務。</p>
+<ul>
+<li>日誠網站</li>
+<li>加好網站</li>
+<li>利欣網站</li>
+<li>睦茗網站</li>
+<li>冠恆網站</li>
+</ul>
+<p>以產品化思維建構Smart Portal模組，並利用合作案例網站開發為基礎，逐步完善產品架構，進而拓展企業形象網服務之業務範疇，降低開發成本。</p>
 <h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
-<li>Ashx</li>
-<li>Ionic.Zip</li>
-<li>OpenXML SDK</li>
+<li>ASP.NET MVC 4</li>
+<li>多國語言</li>
+<li>前後台畫面共用</li>
 </ul>
 ]]></content>
       <categories>
         <category>作品集</category>
       </categories>
       <tags>
-        <tag>MIS</tag>
-        <tag>報名系統</tag>
+        <tag>入口網</tag>
       </tags>
   </entry>
   <entry>
@@ -148,6 +128,26 @@
       </tags>
   </entry>
   <entry>
+    <title>國合會國際人力培訓線上報名暨管理系統</title>
+    <url>/sideproject/20170921/983983372/</url>
+    <content><![CDATA[<p><img src="/images/img-16.png"></p>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>財團法人國際合作發展基金會自1998年開始，以「台灣特有之經濟發展經驗」協助培訓開發中國家政府之中、高階官員及非政府組織人員，研習領域可分為經濟貿易、農業技術、水產漁業、社區發展、科技管理、中小企業、觀光產業等主題。</p>
+<p>為便利研習班相關資料管理，於2001年完成「國際人力資源培訓管理系統開發建置案」(採購案號：ICDF-2001-013)，原始設計架構著重研習班相關資料儲存管理，系統使用至今，期間為因應本會研習班業務需求，曾進行系統功能擴充(如：關鍵字查詢、統計分析功能等)，財團法人國際合作發展基金會為將系統整合現今知識管理平台，擬依目前業務需要規劃建置新系統，進行新舊系統資料轉換，另鑒於上(99)年度嘗試獎學金計畫報名系統成效良好，且為因應日益增加之報名人數，建置線上報名功能，由駐外館/處/駐團統一進行初審及提報作業，以節省紙張及相關行政作業。</p>
+<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
+<li>Ashx</li>
+<li>Ionic.Zip</li>
+<li>OpenXML SDK</li>
+</ul>
+]]></content>
+      <categories>
+        <category>作品集</category>
+      </categories>
+      <tags>
+        <tag>MIS</tag>
+        <tag>報名系統</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>國合會志工業務管理系統</title>
     <url>/sideproject/20170618/610341380/</url>
     <content><![CDATA[<p><img src="/images/img-15.png"></p>
@@ -158,28 +158,11 @@
       </categories>
   </entry>
   <entry>
-    <title>國合會技術合作計畫管理系統</title>
-    <url>/sideproject/20171221/3383621528/</url>
-    <content><![CDATA[<p><img src="/images/img-18.png"></p>
-<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>為有效管理財團法人國際合作發展基金會(以下簡稱 貴會)技術合作處各計畫執行進度，並與 貴會「工作計畫管理系統」進行資料整合， 貴會業於2013年完成建置「技術合作計畫管理系統」，該採購案案名為「駐團業務管理系統擴增功能建置服務」（案號：ICDF-102-014）。</p>
-<p>系統現區分為4大區塊：計畫整合查詢、計畫工作規劃、計畫預算編列及執行進度填報。新計畫首於「工作計畫管理系統」進行登錄，當該計畫通過董事會核定後會產生一計畫編號，則可進入本系統，輸入該計畫編號將原建置於「工作計畫管理系統」之計畫基本資訊傳至本系統。其後，負責該計畫之駐地及會內人員可自「計畫工作規劃」區塊編擬計畫工作時程表、「計畫預算編列」區塊編列年度預算及「執行進度填報」區塊填寫月報表進度。計畫於評估階段時可將於本系統編寫的工作時程表上傳至「工作計畫管理系統」WBS中，並可透過系統編擬計畫年度預算。計畫進入執行階段後，可於本系統填寫各工作項目之每月工作進度，該進度由駐地人員填寫完畢後，傳送至會內端進行審核，審核通過後每月計畫執行進度會傳送至「工作計畫管理系統」。</p>
-<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
-<li>Json.NET</li>
-<li>WebService</li>
-<li>EPPlus套件</li>
-</ul>
-]]></content>
-      <categories>
-        <category>作品集</category>
-      </categories>
-      <tags>
-        <tag>MIS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>常用Git 指令</title>
     <url>/techdoc/20210125/2237860706/</url>
-    <content><![CDATA[<h2 id="Git-基礎架構"><a href="#Git-基礎架構" class="headerlink" title="Git 基礎架構"></a>Git 基礎架構</h2><p><img src="https://i.imgur.com/sYRriVZ.png"></p>
+    <content><![CDATA[<h2 id="Git-基礎架構"><a href="#Git-基礎架構" class="headerlink" title="Git 基礎架構"></a>Git 基礎架構</h2><img src="https://i.imgur.com/sYRriVZ.png" alt="" width="600"/>
+
+
 <h2 id="Git-基礎指令"><a href="#Git-基礎指令" class="headerlink" title="Git 基礎指令"></a>Git 基礎指令</h2><ul>
 <li>查看版本： <code>git --version</code></li>
 <li>設定個人資料<ul>
@@ -403,6 +386,25 @@
       </tags>
   </entry>
   <entry>
+    <title>國合會技術合作計畫管理系統</title>
+    <url>/sideproject/20171221/3383621528/</url>
+    <content><![CDATA[<p><img src="/images/img-18.png"></p>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>為有效管理財團法人國際合作發展基金會(以下簡稱 貴會)技術合作處各計畫執行進度，並與 貴會「工作計畫管理系統」進行資料整合， 貴會業於2013年完成建置「技術合作計畫管理系統」，該採購案案名為「駐團業務管理系統擴增功能建置服務」（案號：ICDF-102-014）。</p>
+<p>系統現區分為4大區塊：計畫整合查詢、計畫工作規劃、計畫預算編列及執行進度填報。新計畫首於「工作計畫管理系統」進行登錄，當該計畫通過董事會核定後會產生一計畫編號，則可進入本系統，輸入該計畫編號將原建置於「工作計畫管理系統」之計畫基本資訊傳至本系統。其後，負責該計畫之駐地及會內人員可自「計畫工作規劃」區塊編擬計畫工作時程表、「計畫預算編列」區塊編列年度預算及「執行進度填報」區塊填寫月報表進度。計畫於評估階段時可將於本系統編寫的工作時程表上傳至「工作計畫管理系統」WBS中，並可透過系統編擬計畫年度預算。計畫進入執行階段後，可於本系統填寫各工作項目之每月工作進度，該進度由駐地人員填寫完畢後，傳送至會內端進行審核，審核通過後每月計畫執行進度會傳送至「工作計畫管理系統」。</p>
+<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
+<li>Json.NET</li>
+<li>WebService</li>
+<li>EPPlus套件</li>
+</ul>
+]]></content>
+      <categories>
+        <category>作品集</category>
+      </categories>
+      <tags>
+        <tag>MIS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>彰化縣政府勞工處工業發展空間資訊整合平台</title>
     <url>/sideproject/20160809/1763360179/</url>
     <content><![CDATA[<p><img src="/images/img-12.png"></p>
@@ -417,22 +419,20 @@
       </tags>
   </entry>
   <entry>
-    <title>彰化縣政府幸福企業甄選</title>
-    <url>/sideproject/20171218/3450408317/</url>
-    <content><![CDATA[<p><img src="/images/img-20.png"></p>
-<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>彰化縣政府為鼓勵企業重視員工福利與薪資，營造安全、幸福、友善與優質的勞動環境，讓企業懂得如何照顧員工、打造幸福的工作環境。 </p>
-<p>舉辦首屆「彰化職場好幸福」企業徵選活動，讓企業間透過活動的舉辦形成良性競爭，分享並交換幸福企業的經驗，讓每位員工都能幸福工作，與企業共同成長，同時提升企業形象，讓員工以企業為榮，長期穩定就業，以減少勞動人力缺口的危機，打造幸福彰化城市。</p>
+    <title>技術入口網</title>
+    <url>/sideproject/20180219/857597094/</url>
+    <content><![CDATA[<p><img src="/images/img-25.png"></p>
 <h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
-<li>第一個自己寫的MVC專案</li>
-<li>Autofac Asp.net Mvc</li>
-<li>四層式的架構</li>
+<li>ELMAH 錯誤紀錄模組</li>
+<li>Editor.md 編輯器</li>
+<li>NuGet Server</li>
 </ul>
 ]]></content>
       <categories>
         <category>作品集</category>
       </categories>
       <tags>
-        <tag>入口網</tag>
+        <tag>markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -455,20 +455,22 @@
       </tags>
   </entry>
   <entry>
-    <title>技術入口網</title>
-    <url>/sideproject/20180219/857597094/</url>
-    <content><![CDATA[<p><img src="/images/img-25.png"></p>
+    <title>彰化縣政府幸福企業甄選</title>
+    <url>/sideproject/20171218/3450408317/</url>
+    <content><![CDATA[<p><img src="/images/img-20.png"></p>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>彰化縣政府為鼓勵企業重視員工福利與薪資，營造安全、幸福、友善與優質的勞動環境，讓企業懂得如何照顧員工、打造幸福的工作環境。 </p>
+<p>舉辦首屆「彰化職場好幸福」企業徵選活動，讓企業間透過活動的舉辦形成良性競爭，分享並交換幸福企業的經驗，讓每位員工都能幸福工作，與企業共同成長，同時提升企業形象，讓員工以企業為榮，長期穩定就業，以減少勞動人力缺口的危機，打造幸福彰化城市。</p>
 <h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
-<li>ELMAH 錯誤紀錄模組</li>
-<li>Editor.md 編輯器</li>
-<li>NuGet Server</li>
+<li>第一個自己寫的MVC專案</li>
+<li>Autofac Asp.net Mvc</li>
+<li>四層式的架構</li>
 </ul>
 ]]></content>
       <categories>
         <category>作品集</category>
       </categories>
       <tags>
-        <tag>markdown</tag>
+        <tag>入口網</tag>
       </tags>
   </entry>
   <entry>
@@ -491,10 +493,53 @@
       </tags>
   </entry>
   <entry>
+    <title>水保局105年度水土保持公共工程技術品質提升計畫</title>
+    <url>/sideproject/20160526/3406392346/</url>
+    <content><![CDATA[<p><img src="/images/img-8.png"></p>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>行政院農業委員會水土保持局(以下簡稱水保局)現階段整體性治山防災計畫，係依現況災害情形進行坡地保育治理等相關工作，為有效提升防減災成效，考量氣候變遷對於水土保持各領域之衝擊，加強防減災工程教育訓練及宣導作業提升相關人員能力，實刻不容緩。</p>
+<p>爰此，擬設計推動氣候變遷下山坡地10年防減災專案計畫之教育宣導訓練計畫，利用相關教育訓練提升水保局同仁職能專業程度與公民參與直接性。</p>
+<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
+<li>線上報名系統</li>
+<li>Email排程</li>
+<li>WebForm</li>
+</ul>
+]]></content>
+      <categories>
+        <category>作品集</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>水利署104年度委辦計畫成果發表會</title>
+    <url>/sideproject/20150625/4036074347/</url>
+    <content><![CDATA[<p><img src="/images/img-6.png"></p>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>水利署於104年度辦理之水利綜合業務、水權與地層下陷防治、水資源保育、水利政策與法規、水利產業與經濟、水源開發及利用、河川海岸與區域排水、資訊與水文觀測、水利工程與災害防治等，九大類委辦計畫成果豐碩，編纂委辦計畫成果摘要彙編並辦理成果發表會，對外發表水利署104年度執行各項委辦計畫之相關成果，並冀由與會專家之討論與建議，協助水利署掌握符合時勢之水資源政策發展趨勢及其未來施政之規劃方向。</p>
+]]></content>
+      <categories>
+        <category>作品集</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>水保局培根計畫人員培訓暨管考系統</title>
+    <url>/sideproject/20170225/451597171/</url>
+    <content><![CDATA[<p><img src="/images/img-19.png"></p>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>培根計畫網及培根管考系統為協助農村再生培根計畫及永續陪伴之資訊管理系統，為利培根計畫及永續陪伴作業之推動，有效管理農村社區、學員、課程及師資等資料，本計畫持續辦理系統維護及功能擴充，並強化培訓作業流程電子化服務，另外新增成果展現功能，包含歷年數據分析、團隊績效呈現等，以期作為決策參考之依據。</p>
+<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
+<li>Vue 1.0</li>
+<li>運行長達10年的系統</li>
+<li>Morris.js</li>
+</ul>
+]]></content>
+      <categories>
+        <category>作品集</category>
+      </categories>
+      <tags>
+        <tag>MIS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>棋牌對戰 Game Server開發</title>
     <url>/sideproject/20210129/625696656/</url>
-    <content><![CDATA[<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/qvejjHk.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/098KPOY.png"></div></div></div></div>
-
+    <content><![CDATA[<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/qvejjHk.jpg" alt="" width="350"/></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/098KPOY.png" alt="" width="350"/></div></div></div></div>
 
 <h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
 <li>CQ9 第一款棋牌對戰遊戲</li>
@@ -570,22 +615,6 @@
       </tags>
   </entry>
   <entry>
-    <title>水保局105年度水土保持公共工程技術品質提升計畫</title>
-    <url>/sideproject/20160526/3406392346/</url>
-    <content><![CDATA[<p><img src="/images/img-8.png"></p>
-<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>行政院農業委員會水土保持局(以下簡稱水保局)現階段整體性治山防災計畫，係依現況災害情形進行坡地保育治理等相關工作，為有效提升防減災成效，考量氣候變遷對於水土保持各領域之衝擊，加強防減災工程教育訓練及宣導作業提升相關人員能力，實刻不容緩。</p>
-<p>爰此，擬設計推動氣候變遷下山坡地10年防減災專案計畫之教育宣導訓練計畫，利用相關教育訓練提升水保局同仁職能專業程度與公民參與直接性。</p>
-<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
-<li>線上報名系統</li>
-<li>Email排程</li>
-<li>WebForm</li>
-</ul>
-]]></content>
-      <categories>
-        <category>作品集</category>
-      </categories>
-  </entry>
-  <entry>
     <title>水保局農村再生執行及管理系統</title>
     <url>/sideproject/20170211/2820871682/</url>
     <content><![CDATA[<p><img src="/images/img-11.png"></p>
@@ -602,38 +631,10 @@
       </categories>
   </entry>
   <entry>
-    <title>水保局培根計畫人員培訓暨管考系統</title>
-    <url>/sideproject/20170225/451597171/</url>
-    <content><![CDATA[<p><img src="/images/img-19.png"></p>
-<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>培根計畫網及培根管考系統為協助農村再生培根計畫及永續陪伴之資訊管理系統，為利培根計畫及永續陪伴作業之推動，有效管理農村社區、學員、課程及師資等資料，本計畫持續辦理系統維護及功能擴充，並強化培訓作業流程電子化服務，另外新增成果展現功能，包含歷年數據分析、團隊績效呈現等，以期作為決策參考之依據。</p>
-<h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
-<li>Vue 1.0</li>
-<li>運行長達10年的系統</li>
-<li>Morris.js</li>
-</ul>
-]]></content>
-      <categories>
-        <category>作品集</category>
-      </categories>
-      <tags>
-        <tag>MIS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>水利署105年度委辦計畫成果發表會</title>
     <url>/sideproject/20160627/3558066781/</url>
     <content><![CDATA[<p><img src="/images/img-7.png"></p>
 <h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>水利署於105年度辦理之委辦計畫，分為水資源綜合業務、水權與地層下陷防治、水資源保育、水利政策與法規、水利產業與經濟、水源開發及利用、河川海岸與區域排水、資訊與水文觀測、水利工程與災害防治等九大類，各項委辦計畫成果豐碩，擬編纂委辦計畫成果摘要彙編，並辦理成果發表會，與各相關之產、官、學界進行成果分享，並對外宣傳及展現水利署105年度委辦計畫豐碩之成果。</p>
-]]></content>
-      <categories>
-        <category>作品集</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>水利署104年度委辦計畫成果發表會</title>
-    <url>/sideproject/20150625/4036074347/</url>
-    <content><![CDATA[<p><img src="/images/img-6.png"></p>
-<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>水利署於104年度辦理之水利綜合業務、水權與地層下陷防治、水資源保育、水利政策與法規、水利產業與經濟、水源開發及利用、河川海岸與區域排水、資訊與水文觀測、水利工程與災害防治等，九大類委辦計畫成果豐碩，編纂委辦計畫成果摘要彙編並辦理成果發表會，對外發表水利署104年度執行各項委辦計畫之相關成果，並冀由與會專家之討論與建議，協助水利署掌握符合時勢之水資源政策發展趨勢及其未來施政之規劃方向。</p>
 ]]></content>
       <categories>
         <category>作品集</category>
@@ -650,14 +651,14 @@
       </categories>
   </entry>
   <entry>
-    <title>行政院農業委員會水土保持局農村風情網-銀髮版</title>
-    <url>/sideproject/20170509/962250387/</url>
-    <content><![CDATA[<p><img src="/images/img-22.png"></p>
+    <title>行政院農業委員會水土保持局農村風情網</title>
+    <url>/sideproject/20180321/3083123936/</url>
+    <content><![CDATA[<p><img src="/images/img-23.png"></p>
 <h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>行政院農業委員會水土保持局於94年度開始蒐集建置農村資訊平台， 103年度農村風情網營運服務主要包括入口網、行動版、兒童版、銀髮版、農村好讚等多元網站，目前網頁內容主要包含「訊息快遞」、「幸福農村」、「農村鮮本團隊貨通」、「農村部落格」、「在地心感動」、「農村行腳」及「農村典藏」等項目，在既有web網站架構下，本年度推動重點以強化農村第一站（農村入口網）、資訊動態有效管理、強化網頁互動資訊管理、加強社群互動討論、農村產業行銷推廣、更新上傳等功能，以吸引更多民眾認識農村、體驗農村、喜愛農村。</p>
 <h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
-<li>即時語音 ITRI TTS</li>
-<li>實作 OData API</li>
-<li>handlebars.js</li>
+<li>文字編輯器：ckeditor</li>
+<li>多種版本</li>
+<li>五層式架構 </li>
 </ul>
 ]]></content>
       <categories>
@@ -686,14 +687,14 @@
       </tags>
   </entry>
   <entry>
-    <title>行政院農業委員會水土保持局農村風情網</title>
-    <url>/sideproject/20180321/3083123936/</url>
-    <content><![CDATA[<p><img src="/images/img-23.png"></p>
+    <title>行政院農業委員會水土保持局農村風情網-銀髮版</title>
+    <url>/sideproject/20170509/962250387/</url>
+    <content><![CDATA[<p><img src="/images/img-22.png"></p>
 <h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>行政院農業委員會水土保持局於94年度開始蒐集建置農村資訊平台， 103年度農村風情網營運服務主要包括入口網、行動版、兒童版、銀髮版、農村好讚等多元網站，目前網頁內容主要包含「訊息快遞」、「幸福農村」、「農村鮮本團隊貨通」、「農村部落格」、「在地心感動」、「農村行腳」及「農村典藏」等項目，在既有web網站架構下，本年度推動重點以強化農村第一站（農村入口網）、資訊動態有效管理、強化網頁互動資訊管理、加強社群互動討論、農村產業行銷推廣、更新上傳等功能，以吸引更多民眾認識農村、體驗農村、喜愛農村。</p>
 <h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
-<li>文字編輯器：ckeditor</li>
-<li>多種版本</li>
-<li>五層式架構 </li>
+<li>即時語音 ITRI TTS</li>
+<li>實作 OData API</li>
+<li>handlebars.js</li>
 </ul>
 ]]></content>
       <categories>
