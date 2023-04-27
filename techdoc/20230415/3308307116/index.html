@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"nicktien007.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="在單元測試中，常常需要使用替身（test doubles）來代替真實的物件，以便控制測試的環境和驗證功能。常見的替身有 Dummy、Stub、Spy、Mock、Fake 等，它們的主要區別如下：  Dummy（虛設物件）：一個不會被使用的佔位物件，只是用來滿足方法簽名，並不會影響測試結果。 Stub（存根物件）：提供固定的、預先定義好的回傳值，讓測試方法可以正常執行，通常用來模擬外部服務、資料存取">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unit Test 中的替身 - Dummy 、Stub、Spy、Mock、Fake">
+<meta property="og:url" content="https://nicktien007.github.io/techdoc/20230415/3308307116/index.html">
+<meta property="og:site_name" content="Nick&#39;s Blog">
+<meta property="og:description" content="在單元測試中，常常需要使用替身（test doubles）來代替真實的物件，以便控制測試的環境和驗證功能。常見的替身有 Dummy、Stub、Spy、Mock、Fake 等，它們的主要區別如下：  Dummy（虛設物件）：一個不會被使用的佔位物件，只是用來滿足方法簽名，並不會影響測試結果。 Stub（存根物件）：提供固定的、預先定義好的回傳值，讓測試方法可以正常執行，通常用來模擬外部服務、資料存取">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2023-04-15T03:37:39.000Z">
+<meta property="article:modified_time" content="2023-04-17T02:31:17.000Z">
+<meta property="article:author" content="Nick">
+<meta property="article:tag" content="Unit Test">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://nicktien007.github.io/techdoc/20230415/3308307116/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>Unit Test 中的替身 - Dummy 、Stub、Spy、Mock、Fake | Nick's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Nick's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://nicktien007.github.io/techdoc/20230415/3308307116/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://raw.githubusercontent.com/nicktien007/Nick.IMG_01/main/img/20210123020654.png">
+      <meta itemprop="name" content="Nick">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nick's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Unit Test 中的替身 - Dummy 、Stub、Spy、Mock、Fake
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2023-04-15 03:37:39" itemprop="dateCreated datePublished" datetime="2023-04-15T03:37:39+00:00">2023-04-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2023-04-17 02:31:17" itemprop="dateModified" datetime="2023-04-17T02:31:17+00:00">2023-04-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/techdoc/" itemprop="url" rel="index"><span itemprop="name">技術文件</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/techdoc/20230415/3308307116/" class="post-meta-item leancloud_visitors" data-flag-title="Unit Test 中的替身 - Dummy 、Stub、Spy、Mock、Fake" title="閱讀次數">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">閱讀次數：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/techdoc/20230415/3308307116/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/techdoc/20230415/3308307116/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>6.2k</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>11 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>在單元測試中，常常需要使用替身（test doubles）來代替真實的物件，以便控制測試的環境和驗證功能。常見的替身有 Dummy、Stub、Spy、Mock、Fake 等，它們的主要區別如下：</p>
+<ol>
+<li>Dummy（虛設物件）：一個不會被使用的佔位物件，只是用來滿足方法簽名，並不會影響測試結果。</li>
+<li>Stub（存根物件）：提供固定的、預先定義好的回傳值，讓測試方法可以正常執行，通常用來模擬外部服務、資料存取等操作。</li>
+<li>Spy（間諜物件）：一個真實的物件，用來監聽被測試物件的方法呼叫和屬性變更，以便在測試中驗證被測試物件的行為是否符合預期。</li>
+<li>Mock（模擬物件）：與 Spy 類似，也是一個真實的物件，但主要是用來預先定義被測試物件的方法呼叫及預期回傳值，以便在測試中驗證被測試物件的行為是否符合預期。</li>
+<li>Fake（假物件）：提供一個簡化的實作，讓測試可以在更簡單的環境中運行，通常是用來測試耗時的、昂貴的操作，如資料庫操作、網路請求等。</li>
+</ol>
+<h2 id="Dummy（虛設物件）-的範例："><a href="#Dummy（虛設物件）-的範例：" class="headerlink" title="Dummy（虛設物件） 的範例："></a>Dummy（虛設物件） 的範例：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Database</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">save</span><span class="params">(String data)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DummyDatabase</span> <span class="keyword">implements</span> <span class="title">Database</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save</span><span class="params">(String data)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// do nothing</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Example</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> Database database;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Example</span><span class="params">(Database database)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.database = database;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">saveData</span><span class="params">(String data)</span> </span>&#123;</span><br><span class="line">        database.save(data);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在這個例子中，我們有一個介面 <code>Database</code> 和一個實現該介面的虛設物件 <code>DummyDatabase</code>。<code>DummyDatabase</code> 實際上不做任何事情，因為它只是一個虛設物件，用於測試其他方法的行為是否正確，而不是測試 <code>Database</code> 介面本身的行為。在 <code>Example</code> 類別中，我們需要一個 <code>Database</code> 物件，並且將其作為建構子參數傳遞。在 <code>saveData</code> 方法中，我們調用傳入的 <code>Database</code> 物件的 <code>save</code> 方法，這裡的 <code>database.save(data)</code> 就是在執行我們要測試的功能。</p>
+<p>在單元測試中，我們可以使用 <code>DummyDatabase</code> 來代替真正的 <code>Database</code> 物件，以便測試 <code>Example</code> 類別中的其他方法的行為是否正確。</p>
+<h2 id="Stub（存根物件）的範例"><a href="#Stub（存根物件）的範例" class="headerlink" title="Stub（存根物件）的範例"></a>Stub（存根物件）的範例</h2><p>假設我們有一個介面 <code>Calculator</code>，它定義了一些數學運算的方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Calculator</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">subtract</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">multiply</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">divide</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>現在，我們要測試一個 <code>CalculatorService</code> 類別，它使用 <code>Calculator</code> 介面來進行數學運算：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CalculatorService</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Calculator calculator;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CalculatorService</span><span class="params">(Calculator calculator)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.calculator = calculator;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">calculate</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sum = calculator.add(x, y);</span><br><span class="line">        <span class="keyword">int</span> difference = calculator.subtract(x, y);</span><br><span class="line">        <span class="keyword">int</span> product = calculator.multiply(x, y);</span><br><span class="line">        <span class="keyword">int</span> quotient = calculator.divide(x, y);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> result = sum + difference + product + quotient;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>為了測試 <code>CalculatorService</code> 類別的 <code>calculate</code> 方法，我們需要一個假的 <code>Calculator</code> 物件，讓它回傳我們預期的結果。這時候，我們就可以使用 Stub 物件來達成目的。以下是一個可能的實作方式：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CalculatorStub</span> <span class="keyword">implements</span> <span class="title">Calculator</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> expectedSum;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> expectedDifference;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> expectedProduct;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> expectedQuotient;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CalculatorStub</span><span class="params">(<span class="keyword">int</span> expectedSum, <span class="keyword">int</span> expectedDifference, <span class="keyword">int</span> expectedProduct, <span class="keyword">int</span> expectedQuotient)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.expectedSum = expectedSum;</span><br><span class="line">        <span class="keyword">this</span>.expectedDifference = expectedDifference;</span><br><span class="line">        <span class="keyword">this</span>.expectedProduct = expectedProduct;</span><br><span class="line">        <span class="keyword">this</span>.expectedQuotient = expectedQuotient;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> expectedSum;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">subtract</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> expectedDifference;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">multiply</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> expectedProduct;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">divide</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> expectedQuotient;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在這個例子中，<code>CalculatorStub</code> 是一個實作了 <code>Calculator</code> 介面的類別，它會回傳我們預期的數值，而不是實際進行數學運算。透過這個 Stub 物件，我們可以控制測試時的輸入和輸出，以驗證 <code>CalculatorService</code> 的行為是否正確。</p>
+<h2 id="Spy（間諜物件）的範例"><a href="#Spy（間諜物件）的範例" class="headerlink" title="Spy（間諜物件）的範例"></a>Spy（間諜物件）的範例</h2><p>假設有一個名為 <code>Calculator</code>的類別，其中有一個方法 <code>add</code>可以對兩個數字進行加法運算。現在我們要建立一個 Spy 物件來追蹤 <code>add</code>方法被調用的次數：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Calculator</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a + b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CalculatorSpy</span> <span class="keyword">extends</span> <span class="title">Calculator</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> addCount = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">        addCount++;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">super</span>.add(a, b);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAddCount</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> addCount;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在這個例子中，我們建立了一個名為 <code>CalculatorSpy</code>的子類別，繼承自 <code>Calculator</code>。<code>CalculatorSpy</code>中新增了一個 <code>addCount</code>變數，用於紀錄 <code>add</code>方法被調用的次數，以及一個 <code>getAddCount</code>方法，用於獲取 <code>addCount</code>的值。</p>
+<p>在 <code>CalculatorSpy</code>的 <code>add</code>方法中，我們先將 <code>addCount</code>加1，然後再調用父類別 <code>Calculator</code>的 <code>add</code>方法，實現了對 <code>add</code>方法的追蹤。當我們需要測試 <code>add</code>方法是否正確被調用時，可以使用 <code>CalculatorSpy</code>物件來取得 <code>addCount</code>的值，判斷 <code>add</code>方法是否被正確呼叫。</p>
+<h2 id="Mock（模擬物件）-的範例"><a href="#Mock（模擬物件）-的範例" class="headerlink" title="Mock（模擬物件） 的範例"></a>Mock（模擬物件） 的範例</h2><p>假設有一個 <code>UserService</code> 介面定義了一個 <code>addUser</code> 方法，接收一個 User 物件作為參數，並回傳一個 boolean 表示是否成功新增使用者。現在我們要實作一個 <code> UserManage</code>r 類別，裡面使用了 <code>UserService</code> 來新增使用者，如果新增失敗則會丟出一個例外。我們希望在測試 <code>UserManager</code>類別時，可以模擬 <code>UserService</code> 的行為，測試 <code>UserManage</code>r 在不同的情況下的表現。</p>
+<p>下面是使用 <code>Mockito</code> 模擬 <code>UserService</code> 物件的範例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.junit.Before;</span><br><span class="line"><span class="keyword">import</span> org.junit.Test;</span><br><span class="line"><span class="keyword">import</span> org.mockito.Mock;</span><br><span class="line"><span class="keyword">import</span> org.mockito.MockitoAnnotations;</span><br><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> org.mockito.Mockito.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserManagerTest</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Mock</span></span><br><span class="line">    UserService userService;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> UserManager userManager;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Before</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUp</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        MockitoAnnotations.initMocks(<span class="keyword">this</span>);</span><br><span class="line">        userManager = <span class="keyword">new</span> UserManager(userService);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testAddUserSuccess</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="comment">// 模擬 addUser 方法成功回傳 true</span></span><br><span class="line">        when(userService.addUser(any(User.class))).thenReturn(<span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 執行測試</span></span><br><span class="line">        <span class="keyword">boolean</span> result = userManager.addUser(<span class="keyword">new</span> User(<span class="string">&quot;test_user&quot;</span>));</span><br><span class="line">        assertTrue(result);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test(expected = UserExistsException.class)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testAddUserFailure</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="comment">// 模擬 addUser 方法拋出 UserExistsException 例外</span></span><br><span class="line">        when(userService.addUser(any(User.class))).thenThrow(<span class="keyword">new</span> UserExistsException());</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 執行測試</span></span><br><span class="line">        userManager.addUser(<span class="keyword">new</span> User(<span class="string">&quot;test_user&quot;</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在這個範例中，我們使用了 <code>@Mock</code> 註解來創建一個 <code>UserService</code> 的模擬物件，並在測試方法中使用 <code>when()</code> 方法來指定模擬物件的行為。在 <code>testAddUserSuccess()</code>測試方法中，我們模擬 <code>addUser</code>方法成功回傳 true，測試 <code>userManager.addUser(new User(&quot;test\_user&quot;)) </code>方法的回傳值是否為 <code>true</code>。在 <code>testAddUserFailure() </code>測試方法中，我們模擬 <code>addUser</code>方法拋出 <code>UserExistsException</code>例外，測試 <code>userManager.addUser(new User(&quot;test\_user&quot;))</code>是否會拋出 <code>UserExistsException</code> 例外。</p>
+<h2 id="Fake（假物件）的範例"><a href="#Fake（假物件）的範例" class="headerlink" title="Fake（假物件）的範例"></a>Fake（假物件）的範例</h2><p>Java中的Fake物件通常是指一個實現了相同介面但是行為不同的假物件，用來在測試中替換真實的物件進行測試。以下是一個簡單的Java Fake物件的範例：</p>
+<p>假設我們有一個 <code>UserDao</code> 類別，其中有一個 <code>createUser</code> 方法會新增使用者到資料庫中，現在我們希望在測試時不要真的操作資料庫，可以使用 Fake 物件來模擬資料庫操作。</p>
+<p>首先，我們可以建立一個 <code>FakeUserDao</code> 類別，它實作了 <code>UserDao</code> 介面，但是在 <code>createUser</code> 方法中並不會真的寫入資料庫，而是將使用者資訊存入一個 <code>List</code> 中：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FakeUserDao</span> <span class="keyword">implements</span> <span class="title">UserDao</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> List&lt;User&gt; users = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">createUser</span><span class="params">(User user)</span> </span>&#123;</span><br><span class="line">        users.add(user);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 其他 UserDao 的方法也要實作，但在這個例子中暫時省略</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>接下來我們可以撰寫一個測試，來測試當呼叫 <code>UserService.createUser</code> 時，是否有將使用者資訊儲存到 <code>FakeUserDao</code> 的 <code>users</code> 屬性中：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserServiceTest</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testCreateUser</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 建立一個 FakeUserDao 物件</span></span><br><span class="line">        UserDao fakeDao = <span class="keyword">new</span> FakeUserDao();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 建立一個 UserService 物件，並將 FakeUserDao 物件注入</span></span><br><span class="line">        UserService userService = <span class="keyword">new</span> UserServiceImpl(fakeDao);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 呼叫 createUser 方法，傳入一個使用者物件</span></span><br><span class="line">        User user = <span class="keyword">new</span> User(<span class="string">&quot;john.doe&quot;</span>, <span class="string">&quot;password&quot;</span>);</span><br><span class="line">        userService.createUser(user);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 確認使用者資訊已經被儲存到 FakeUserDao 的 users 屬性中</span></span><br><span class="line">        List&lt;User&gt; users = ((FakeUserDao) fakeDao).getUsers();</span><br><span class="line">        assertEquals(<span class="number">1</span>, users.size());</span><br><span class="line">        assertEquals(<span class="string">&quot;john.doe&quot;</span>, users.get(<span class="number">0</span>).getUsername());</span><br><span class="line">        assertEquals(<span class="string">&quot;password&quot;</span>, users.get(<span class="number">0</span>).getPassword());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在這個測試中，我們先建立了一個 <code>FakeUserDao</code> 物件，然後將它注入到 <code>UserServiceImpl</code> 物件中。接著呼叫 <code>createUser</code> 方法新增一個使用者，最後再確認使用者資訊已經被儲存到 <code>FakeUserDao</code> 的 <code>users</code> 屬性中。</p>
+<p>這樣做的好處是我們可以不用實際操作資料庫就能夠進行測試，這樣可以讓測試更快速、更穩定。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Unit-Test/" rel="tag"><i class="fa fa-tag"></i> Unit Test</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/techdoc/20230427/1767889552/" rel="prev" title="如何在IntelliJ IDEA 上偵錯 maven plugin">
+      <i class="fa fa-chevron-left"></i> 如何在IntelliJ IDEA 上偵錯 maven plugin
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/techdoc/20220209/1973731614/" rel="next" title="使用 SHFB 自動化建立 Assembly 的 Help 文件">
+      使用 SHFB 自動化建立 Assembly 的 Help 文件 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Dummy%EF%BC%88%E8%99%9B%E8%A8%AD%E7%89%A9%E4%BB%B6%EF%BC%89-%E7%9A%84%E7%AF%84%E4%BE%8B%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">Dummy（虛設物件） 的範例：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Stub%EF%BC%88%E5%AD%98%E6%A0%B9%E7%89%A9%E4%BB%B6%EF%BC%89%E7%9A%84%E7%AF%84%E4%BE%8B"><span class="nav-number">2.</span> <span class="nav-text">Stub（存根物件）的範例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spy%EF%BC%88%E9%96%93%E8%AB%9C%E7%89%A9%E4%BB%B6%EF%BC%89%E7%9A%84%E7%AF%84%E4%BE%8B"><span class="nav-number">3.</span> <span class="nav-text">Spy（間諜物件）的範例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mock%EF%BC%88%E6%A8%A1%E6%93%AC%E7%89%A9%E4%BB%B6%EF%BC%89-%E7%9A%84%E7%AF%84%E4%BE%8B"><span class="nav-number">4.</span> <span class="nav-text">Mock（模擬物件） 的範例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fake%EF%BC%88%E5%81%87%E7%89%A9%E4%BB%B6%EF%BC%89%E7%9A%84%E7%AF%84%E4%BE%8B"><span class="nav-number">5.</span> <span class="nav-text">Fake（假物件）的範例</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Nick"
+      src="https://raw.githubusercontent.com/nicktien007/Nick.IMG_01/main/img/20210123020654.png">
+  <p class="site-author-name" itemprop="name">Nick</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/nicktien007" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;nicktien007" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:trojanhorse0077@gmail.com" title="E-Mail → mailto:trojanhorse0077@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+
+<div class="links-of-blogroll motion-element links-of-blogroll-block">
+<br>
+<div class="links-of-blogroll-title">
+    <!-- 設定你要的fa fa icon-->
+    <i class="fa fa-history fa-" aria-hidden="true"></i>
+    近期文章
+</div>
+<ul class="links-of-blogroll-list">
+    <!---->
+    
+    
+    <li class='pull-left' style="white-space:normal; text-align:left" >
+      <time title="創建時間" itemprop="dateCreated datePublished" datetime="2023-04-27T20:44:00+00:00">
+        04/27
+      </time>
+      <a href="/techdoc/20230427/1767889552/" title="如何在IntelliJ IDEA 上偵錯 maven plugin">如何在IntelliJ IDEA 上偵錯 maven plugin</a>
+      <br>
+    </li>
+    
+    <li class='pull-left' style="white-space:normal; text-align:left" >
+      <time title="創建時間" itemprop="dateCreated datePublished" datetime="2023-04-15T03:37:39+00:00">
+        04/15
+      </time>
+      <a href="/techdoc/20230415/3308307116/" title="Unit Test 中的替身 - Dummy 、Stub、Spy、Mock、Fake">Unit Test 中的替身 - Dummy 、Stub、Spy、Mock、Fake</a>
+      <br>
+    </li>
+    
+    <li class='pull-left' style="white-space:normal; text-align:left" >
+      <time title="創建時間" itemprop="dateCreated datePublished" datetime="2022-02-09T20:11:47+00:00">
+        02/09
+      </time>
+      <a href="/techdoc/20220209/1973731614/" title="使用 SHFB 自動化建立 Assembly 的 Help 文件">使用 SHFB 自動化建立 Assembly 的 Help 文件</a>
+      <br>
+    </li>
+    
+    <li class='pull-left' style="white-space:normal; text-align:left" >
+      <time title="創建時間" itemprop="dateCreated datePublished" datetime="2021-03-11T20:59:00+00:00">
+        03/11
+      </time>
+      <a href="/note/20210311/45664323/" title="如何做好簡報">如何做好簡報</a>
+      <br>
+    </li>
+    
+    <li class='pull-left' style="white-space:normal; text-align:left" >
+      <time title="創建時間" itemprop="dateCreated datePublished" datetime="2021-01-29T20:37:00+00:00">
+        01/29
+      </time>
+      <a href="/sideproject/20210129/625696656/" title="棋牌對戰 Game Server開發">棋牌對戰 Game Server開發</a>
+      <br>
+    </li>
+    
+</ul>
+</div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Nick</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="總字數">20k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="所需總閱讀時間">37 分鐘</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/next-theme/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  //console.log('//unpkg.com/valine/dist/Valine.min.js');
+  //console.log('pjA02uKgAjL2CRzftK1FCI0P-MdYXbMMI');
+  //console.log('T4FxkgVpgo8Pm64TAQ9Bu0DF');
+  
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'pjA02uKgAjL2CRzftK1FCI0P-MdYXbMMI',
+      appKey     : 'T4FxkgVpgo8Pm64TAQ9Bu0DF',
+      placeholder: "留言 ~",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-TW' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : 'https://pja02ukg.api.lncldglobal.com'
+    });
+  }, window.Valine);
+});
+</script>
+
+    </div>
+</body>
+</html>

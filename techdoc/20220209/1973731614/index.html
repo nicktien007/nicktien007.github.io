@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"nicktien007.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="SHFB：Sandcastle Help File Builder 一套能動態產生 MSDN Style 文件的工具 可以指令化，方便整合 CI&#x2F;CD GitHub：https:&#x2F;&#x2F;github.com&#x2F;EWSoftware&#x2F;SHFB&#x2F;releases  背景問題描述專案開發時，PG最不喜歡的無非是：  寫文件 對方沒寫文件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 SHFB 自動化建立 Assembly 的 Help 文件">
+<meta property="og:url" content="https://nicktien007.github.io/techdoc/20220209/1973731614/index.html">
+<meta property="og:site_name" content="Nick&#39;s Blog">
+<meta property="og:description" content="SHFB：Sandcastle Help File Builder 一套能動態產生 MSDN Style 文件的工具 可以指令化，方便整合 CI&#x2F;CD GitHub：https:&#x2F;&#x2F;github.com&#x2F;EWSoftware&#x2F;SHFB&#x2F;releases  背景問題描述專案開發時，PG最不喜歡的無非是：  寫文件 對方沒寫文件">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://i.imgur.com/3tXWvBI.png">
+<meta property="og:image" content="https://i.imgur.com/gMJZYDg.png">
+<meta property="og:image" content="https://i.imgur.com/sU41OvM.png">
+<meta property="og:image" content="https://i.imgur.com/5ySl5wn.png">
+<meta property="og:image" content="https://i.imgur.com/gzWW1bA.png">
+<meta property="og:image" content="https://i.imgur.com/gR8vTrY.png">
+<meta property="og:image" content="https://i.imgur.com/KnAVyS2.png">
+<meta property="og:image" content="https://i.imgur.com/Co83pqq.png">
+<meta property="og:image" content="https://i.imgur.com/GGcQOrf.png">
+<meta property="og:image" content="https://i.imgur.com/uII1RtS.png">
+<meta property="og:image" content="https://i.imgur.com/XIZt1pn.png">
+<meta property="og:image" content="https://i.imgur.com/zce8Zf4.png">
+<meta property="og:image" content="https://i.imgur.com/v4L1yQs.png">
+<meta property="og:image" content="https://i.imgur.com/iy52rlf.png">
+<meta property="og:image" content="https://i.imgur.com/lmUQSly.png">
+<meta property="og:image" content="https://i.imgur.com/YDjrY46.png">
+<meta property="og:image" content="https://i.imgur.com/oI0X88P.png">
+<meta property="og:image" content="https://i.imgur.com/mHYLuJy.png">
+<meta property="og:image" content="https://i.imgur.com/WFm4Fee.png">
+<meta property="og:image" content="https://i.imgur.com/KC7opJw.png">
+<meta property="article:published_time" content="2022-02-09T20:11:47.000Z">
+<meta property="article:modified_time" content="2023-04-17T02:19:03.000Z">
+<meta property="article:author" content="Nick">
+<meta property="article:tag" content="SHFB">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.imgur.com/3tXWvBI.png">
+
+<link rel="canonical" href="https://nicktien007.github.io/techdoc/20220209/1973731614/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>使用 SHFB 自動化建立 Assembly 的 Help 文件 | Nick's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Nick's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://nicktien007.github.io/techdoc/20220209/1973731614/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://raw.githubusercontent.com/nicktien007/Nick.IMG_01/main/img/20210123020654.png">
+      <meta itemprop="name" content="Nick">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nick's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          使用 SHFB 自動化建立 Assembly 的 Help 文件
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2022-02-09 20:11:47" itemprop="dateCreated datePublished" datetime="2022-02-09T20:11:47+00:00">2022-02-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2023-04-17 02:19:03" itemprop="dateModified" datetime="2023-04-17T02:19:03+00:00">2023-04-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/techdoc/" itemprop="url" rel="index"><span itemprop="name">技術文件</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/techdoc/20220209/1973731614/" class="post-meta-item leancloud_visitors" data-flag-title="使用 SHFB 自動化建立 Assembly 的 Help 文件" title="閱讀次數">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">閱讀次數：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/techdoc/20220209/1973731614/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/techdoc/20220209/1973731614/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>2.3k</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>4 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <ul>
+<li>SHFB：Sandcastle Help File Builder</li>
+<li>一套能動態產生 MSDN Style 文件的工具</li>
+<li>可以指令化，方便整合 CI/CD</li>
+<li>GitHub：<a target="_blank" rel="noopener" href="https://github.com/EWSoftware/SHFB/releases">https://github.com/EWSoftware/SHFB/releases</a></li>
+</ul>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><h3 id="問題描述"><a href="#問題描述" class="headerlink" title="問題描述"></a>問題描述</h3><p>專案開發時，PG最不喜歡的無非是：</p>
+<ol>
+<li>寫文件</li>
+<li><strong>對方沒寫文件</strong></li>
+</ol>
+<blockquote>
+<p>心裡OS：「寫Code都來不及，還要維護文件」，然後….文件就這樣爛了….</p>
+</blockquote>
+<p>因為以上種種問題，Live Document 需求就由然而生</p>
+<p>如果可以「依據實際的 Code與註解，動態產生文件」…不是很美好嗎？？</p>
+<p>接下來就來說明如何實作。</p>
+<h2 id="如何開始"><a href="#如何開始" class="headerlink" title="如何開始"></a>如何開始</h2><h3 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h3><h4 id="Step-1-下載-SHFB"><a href="#Step-1-下載-SHFB" class="headerlink" title="Step 1 - 下載 SHFB"></a>Step 1 - 下載 SHFB</h4><blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/EWSoftware/SHFB/releases">https://github.com/EWSoftware/SHFB/releases</a></p>
+</blockquote>
+<p><img src="https://i.imgur.com/3tXWvBI.png" alt="下載 SHFB"></p>
+<h4 id="Step-2-安裝主程式"><a href="#Step-2-安裝主程式" class="headerlink" title="Step 2 - 安裝主程式"></a>Step 2 - 安裝主程式</h4><blockquote>
+<p>雙擊安裝程式→Next→Install SHFB</p>
+</blockquote>
+<p><img src="https://i.imgur.com/gMJZYDg.png"><br><img src="https://i.imgur.com/sU41OvM.png"></p>
+<h4 id="Step-3-安裝-Visual-Studio-插件重點"><a href="#Step-3-安裝-Visual-Studio-插件重點" class="headerlink" title="Step 3 - 安裝 Visual Studio 插件重點"></a>Step 3 - 安裝 Visual Studio 插件<code>重點</code></h4><p><img src="https://i.imgur.com/5ySl5wn.png"></p>
+<h4 id="Step-4-安裝-Visual-Studio-Schemas-可選的"><a href="#Step-4-安裝-Visual-Studio-Schemas-可選的" class="headerlink" title="Step 4 - 安裝 Visual Studio Schemas(可選的)"></a>Step 4 - 安裝 Visual Studio Schemas(可選的)</h4><p><img src="https://i.imgur.com/gzWW1bA.png"></p>
+<h4 id="Step-5-安裝-Visual-Studio-Snippets-可選的"><a href="#Step-5-安裝-Visual-Studio-Snippets-可選的" class="headerlink" title="Step 5 - 安裝 Visual Studio Snippets(可選的)"></a>Step 5 - 安裝 Visual Studio Snippets(可選的)</h4><p><img src="https://i.imgur.com/gR8vTrY.png"></p>
+<h4 id="Step-6-完成安裝"><a href="#Step-6-完成安裝" class="headerlink" title="Step 6 - 完成安裝"></a>Step 6 - 完成安裝</h4><p><img src="https://i.imgur.com/KnAVyS2.png"></p>
+<h3 id="設定"><a href="#設定" class="headerlink" title="設定"></a>設定</h3><h4 id="Step-1-啟用「建置時產出XML文件檔案」"><a href="#Step-1-啟用「建置時產出XML文件檔案」" class="headerlink" title="Step 1 - 啟用「建置時產出XML文件檔案」"></a>Step 1 - 啟用「建置時產出XML文件檔案」</h4><blockquote>
+<p>專案上點擊滑鼠右鍵 → 屬性 → 建置頁籤 → 勾選 XML文件檔案 → 儲存後，進行編譯</p>
+</blockquote>
+<p><img src="https://i.imgur.com/Co83pqq.png"></p>
+<p>:::info<br><strong>什麼是XML文件檔案？</strong></p>
+<p>主要是編輯的時候，根據我們在開發程式時所加上的XML註釋，動態產生的文檔。<br>:::</p>
+<p>例如：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 這是一個範例方法</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;param&quot;&gt;</span>輸入的參數<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span>回傳的結果<span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Result <span class="title">MyMethod</span>(<span class="params">Input param</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//do soming..</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Result();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Step-2-新建-Document-專案"><a href="#Step-2-新建-Document-專案" class="headerlink" title="Step 2 - 新建 Document 專案"></a>Step 2 - 新建 Document 專案</h4><blockquote>
+<p>方案上點擊滑鼠右鍵 → 加入 → 新增專案</p>
+</blockquote>
+<p><img src="https://i.imgur.com/GGcQOrf.png"></p>
+<blockquote>
+<p>選取「Documemtsation」 → 指定專案名稱 → 確定</p>
+</blockquote>
+<p><img src="https://i.imgur.com/uII1RtS.png"></p>
+<h4 id="Step-3-加入需要產出文件的-dll、-xml"><a href="#Step-3-加入需要產出文件的-dll、-xml" class="headerlink" title="Step 3 - 加入需要產出文件的 dll、 xml"></a>Step 3 - 加入需要產出文件的 dll、 xml</h4><blockquote>
+<p>Documentation Source 滑鼠右鍵 → Add Documentation Source → 找到需要產出文件的 dll 與 xml</p>
+</blockquote>
+<p><img src="https://i.imgur.com/XIZt1pn.png"></p>
+<h4 id="Step-4-Documemtsation-專案配置"><a href="#Step-4-Documemtsation-專案配置" class="headerlink" title="Step 4 - Documemtsation 專案配置"></a>Step 4 - Documemtsation 專案配置</h4><blockquote>
+<p>Documemtsation專案 滑鼠右鍵 → 屬性</p>
+</blockquote>
+<h5 id="Step-4-1-配置「Build」頁籤"><a href="#Step-4-1-配置「Build」頁籤" class="headerlink" title="Step 4-1 配置「Build」頁籤"></a>Step 4-1 配置「Build」頁籤</h5><ol>
+<li>左邊頁籤選擇「Build」</li>
+<li>PresentationStyle ：選擇<code>VS2013</code></li>
+<li>Build These help file formats<code>(輸出文件格式)</code>：Website(HTML/ASP.NET)</li>
+<li>Syntax：輸出程式語言格式</li>
+</ol>
+<p><img src="https://i.imgur.com/zce8Zf4.png"></p>
+<h5 id="Step-4-2-配置「Help-File」頁籤"><a href="#Step-4-2-配置「Help-File」頁籤" class="headerlink" title="Step 4-2 配置「Help File」頁籤"></a>Step 4-2 配置「Help File」頁籤</h5><ol>
+<li>左邊頁籤選擇「Help File」</li>
+<li>Help title：自訂 title</li>
+<li>Help File Language：文件語言(有中文)</li>
+</ol>
+<blockquote>
+<p>其他頁籤的設定，可依需求再進行設定 → 儲存後，即可編譯。</p>
+</blockquote>
+<p><img src="https://i.imgur.com/v4L1yQs.png"></p>
+<h3 id="產生說明文件"><a href="#產生說明文件" class="headerlink" title="產生說明文件"></a>產生說明文件</h3><blockquote>
+<p>建置成功 → Documemtsation專案 底下會產生「Help」資料夾 → 裡面有產生的說明文件</p>
+</blockquote>
+<p><img src="https://i.imgur.com/iy52rlf.png"></p>
+<p><img src="https://i.imgur.com/lmUQSly.png"></p>
+<hr>
+<p><img src="https://i.imgur.com/YDjrY46.png"></p>
+<h3 id="產生-「Word」格式說明文件"><a href="#產生-「Word」格式說明文件" class="headerlink" title="產生 「Word」格式說明文件"></a>產生 「Word」格式說明文件</h3><blockquote>
+<p>Documemtsation專案 滑鼠右鍵 → 屬性</p>
+</blockquote>
+<ol>
+<li>左邊頁籤選擇「Build」</li>
+<li>PresentationStyle ：選擇<code>Open XML Document</code></li>
+<li>Build These help file formats<code>(輸出文件格式)</code>：Open XML(docx)</li>
+</ol>
+<p><img src="https://i.imgur.com/oI0X88P.png"></p>
+<blockquote>
+<p>儲存後，編譯，Help資料夾即生成 Word Help 文件。</p>
+</blockquote>
+<p><img src="https://i.imgur.com/mHYLuJy.png"></p>
+<h3 id="指令-方便整合-CI-CD"><a href="#指令-方便整合-CI-CD" class="headerlink" title="指令 - 方便整合 CI/CD"></a>指令 - 方便整合 CI/CD</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Powershell SHFB 自動建置佈暑 HELP 文件指令</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#Sandcastle Help File Builder 根目錄 (請確認執行路徑)</span></span><br><span class="line"><span class="variable">$SHFB_Path</span> = <span class="string">&quot;/property:SHFBROOT=C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder&quot;</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">#Sandcastle Help File Builder Documemtsation 專案目錄 (請自行調整路徑)</span></span><br><span class="line"><span class="variable">$SHFB_ProjectPath</span> = <span class="string">&quot;C:\Nick\Gitlab\GameServer\Indica\Indica.Help.Doc\Indica.Help.Doc.shfbproj&quot;</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">#文件站台 (請自行調整路徑)</span></span><br><span class="line"><span class="variable">$Result_WebSite</span> = <span class="string">&quot;C:\Nick\Gitlab\GameServer\Indica\Indica.Help.Doc\Help\index.html&quot;</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">#Compiler</span></span><br><span class="line">C:\Windows\Microsoft.NET\Framework64\v4.<span class="number">0.30319</span>\MSBuild.exe /p:Configuration=Debug <span class="variable">$SHFB_Path</span> <span class="variable">$SHFB_ProjectPath</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#使用Chrome 查看文件(自行調整相關工具)</span></span><br><span class="line"><span class="built_in">START</span> Chrome <span class="variable">$Result_WebSite</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://i.imgur.com/WFm4Fee.png"></p>
+<p><img src="https://i.imgur.com/KC7opJw.png"><br>:::success<br>這邊的警告是告訴我們相關XML注解沒有填寫。<br>:::</p>
+<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><ul>
+<li>養成 <code>XML注解</code> 習慣</li>
+<li>產文件可以很優雅</li>
+<li>不需要維護文件</li>
+<li>整合 CI/CD</li>
+<li>如果想制作 WebApi2，更加適合的套件<ul>
+<li><a target="_blank" rel="noopener" href="http://bit.ly/2zIK0KJ">Microsoft Help Page</a></li>
+<li><a target="_blank" rel="noopener" href="https://swagger.io/">Swagger</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h2><p><a target="_blank" rel="noopener" href="http://bit.ly/2Fe3cG4">Sandcastle Help File Builder 安裝紀錄</a><br><a target="_blank" rel="noopener" href="http://bit.ly/2F9O7Fp">使用 Sandcastle Help File Builder 建立 Assembly 的補助說明檔案</a><br><a target="_blank" rel="noopener" href="http://bit.ly/2FcY3OI">使用 Sandcastle Help File Builder 製作類別庫文件</a><br><a target="_blank" rel="noopener" href="http://bit.ly/2FdvVL9">使用 Sandcastle工具在Visual Studio環境產生Help文件</a></p>
+<h6 id="tags-說明文件-SHFB"><a href="#tags-說明文件-SHFB" class="headerlink" title="tags: 說明文件 SHFB"></a>tags: <code>說明文件</code> <code>SHFB</code></h6>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/SHFB/" rel="tag"><i class="fa fa-tag"></i> SHFB</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/techdoc/20230415/3308307116/" rel="prev" title="Unit Test 中的替身 - Dummy 、Stub、Spy、Mock、Fake">
+      <i class="fa fa-chevron-left"></i> Unit Test 中的替身 - Dummy 、Stub、Spy、Mock、Fake
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/note/20210311/45664323/" rel="next" title="如何做好簡報">
+      如何做好簡報 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%95%8F%E9%A1%8C%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">問題描述</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E9%96%8B%E5%A7%8B"><span class="nav-number">2.</span> <span class="nav-text">如何開始</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D"><span class="nav-number">2.1.</span> <span class="nav-text">安裝</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-1-%E4%B8%8B%E8%BC%89-SHFB"><span class="nav-number">2.1.1.</span> <span class="nav-text">Step 1 - 下載 SHFB</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-2-%E5%AE%89%E8%A3%9D%E4%B8%BB%E7%A8%8B%E5%BC%8F"><span class="nav-number">2.1.2.</span> <span class="nav-text">Step 2 - 安裝主程式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-3-%E5%AE%89%E8%A3%9D-Visual-Studio-%E6%8F%92%E4%BB%B6%E9%87%8D%E9%BB%9E"><span class="nav-number">2.1.3.</span> <span class="nav-text">Step 3 - 安裝 Visual Studio 插件重點</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-4-%E5%AE%89%E8%A3%9D-Visual-Studio-Schemas-%E5%8F%AF%E9%81%B8%E7%9A%84"><span class="nav-number">2.1.4.</span> <span class="nav-text">Step 4 - 安裝 Visual Studio Schemas(可選的)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-5-%E5%AE%89%E8%A3%9D-Visual-Studio-Snippets-%E5%8F%AF%E9%81%B8%E7%9A%84"><span class="nav-number">2.1.5.</span> <span class="nav-text">Step 5 - 安裝 Visual Studio Snippets(可選的)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-6-%E5%AE%8C%E6%88%90%E5%AE%89%E8%A3%9D"><span class="nav-number">2.1.6.</span> <span class="nav-text">Step 6 - 完成安裝</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A8%AD%E5%AE%9A"><span class="nav-number">2.2.</span> <span class="nav-text">設定</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-1-%E5%95%9F%E7%94%A8%E3%80%8C%E5%BB%BA%E7%BD%AE%E6%99%82%E7%94%A2%E5%87%BAXML%E6%96%87%E4%BB%B6%E6%AA%94%E6%A1%88%E3%80%8D"><span class="nav-number">2.2.1.</span> <span class="nav-text">Step 1 - 啟用「建置時產出XML文件檔案」</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-2-%E6%96%B0%E5%BB%BA-Document-%E5%B0%88%E6%A1%88"><span class="nav-number">2.2.2.</span> <span class="nav-text">Step 2 - 新建 Document 專案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-3-%E5%8A%A0%E5%85%A5%E9%9C%80%E8%A6%81%E7%94%A2%E5%87%BA%E6%96%87%E4%BB%B6%E7%9A%84-dll%E3%80%81-xml"><span class="nav-number">2.2.3.</span> <span class="nav-text">Step 3 - 加入需要產出文件的 dll、 xml</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-4-Documemtsation-%E5%B0%88%E6%A1%88%E9%85%8D%E7%BD%AE"><span class="nav-number">2.2.4.</span> <span class="nav-text">Step 4 - Documemtsation 專案配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Step-4-1-%E9%85%8D%E7%BD%AE%E3%80%8CBuild%E3%80%8D%E9%A0%81%E7%B1%A4"><span class="nav-number">2.2.4.1.</span> <span class="nav-text">Step 4-1 配置「Build」頁籤</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Step-4-2-%E9%85%8D%E7%BD%AE%E3%80%8CHelp-File%E3%80%8D%E9%A0%81%E7%B1%A4"><span class="nav-number">2.2.4.2.</span> <span class="nav-text">Step 4-2 配置「Help File」頁籤</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A2%E7%94%9F%E8%AA%AA%E6%98%8E%E6%96%87%E4%BB%B6"><span class="nav-number">2.3.</span> <span class="nav-text">產生說明文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A2%E7%94%9F-%E3%80%8CWord%E3%80%8D%E6%A0%BC%E5%BC%8F%E8%AA%AA%E6%98%8E%E6%96%87%E4%BB%B6"><span class="nav-number">2.4.</span> <span class="nav-text">產生 「Word」格式說明文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%87%E4%BB%A4-%E6%96%B9%E4%BE%BF%E6%95%B4%E5%90%88-CI-CD"><span class="nav-number">2.5.</span> <span class="nav-text">指令 - 方便整合 CI&#x2F;CD</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B5%90%E8%AB%96"><span class="nav-number">3.</span> <span class="nav-text">結論</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ref"><span class="nav-number">4.</span> <span class="nav-text">Ref</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#tags-%E8%AA%AA%E6%98%8E%E6%96%87%E4%BB%B6-SHFB"><span class="nav-number">4.0.0.0.1.</span> <span class="nav-text">tags: 說明文件 SHFB</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Nick"
+      src="https://raw.githubusercontent.com/nicktien007/Nick.IMG_01/main/img/20210123020654.png">
+  <p class="site-author-name" itemprop="name">Nick</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/nicktien007" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;nicktien007" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:trojanhorse0077@gmail.com" title="E-Mail → mailto:trojanhorse0077@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+
+<div class="links-of-blogroll motion-element links-of-blogroll-block">
+<br>
+<div class="links-of-blogroll-title">
+    <!-- 設定你要的fa fa icon-->
+    <i class="fa fa-history fa-" aria-hidden="true"></i>
+    近期文章
+</div>
+<ul class="links-of-blogroll-list">
+    <!---->
+    
+    
+    <li class='pull-left' style="white-space:normal; text-align:left" >
+      <time title="創建時間" itemprop="dateCreated datePublished" datetime="2023-04-27T20:44:00+00:00">
+        04/27
+      </time>
+      <a href="/techdoc/20230427/1767889552/" title="如何在IntelliJ IDEA 上偵錯 maven plugin">如何在IntelliJ IDEA 上偵錯 maven plugin</a>
+      <br>
+    </li>
+    
+    <li class='pull-left' style="white-space:normal; text-align:left" >
+      <time title="創建時間" itemprop="dateCreated datePublished" datetime="2023-04-15T03:37:39+00:00">
+        04/15
+      </time>
+      <a href="/techdoc/20230415/3308307116/" title="Unit Test 中的替身 - Dummy 、Stub、Spy、Mock、Fake">Unit Test 中的替身 - Dummy 、Stub、Spy、Mock、Fake</a>
+      <br>
+    </li>
+    
+    <li class='pull-left' style="white-space:normal; text-align:left" >
+      <time title="創建時間" itemprop="dateCreated datePublished" datetime="2022-02-09T20:11:47+00:00">
+        02/09
+      </time>
+      <a href="/techdoc/20220209/1973731614/" title="使用 SHFB 自動化建立 Assembly 的 Help 文件">使用 SHFB 自動化建立 Assembly 的 Help 文件</a>
+      <br>
+    </li>
+    
+    <li class='pull-left' style="white-space:normal; text-align:left" >
+      <time title="創建時間" itemprop="dateCreated datePublished" datetime="2021-03-11T20:59:00+00:00">
+        03/11
+      </time>
+      <a href="/note/20210311/45664323/" title="如何做好簡報">如何做好簡報</a>
+      <br>
+    </li>
+    
+    <li class='pull-left' style="white-space:normal; text-align:left" >
+      <time title="創建時間" itemprop="dateCreated datePublished" datetime="2021-01-29T20:37:00+00:00">
+        01/29
+      </time>
+      <a href="/sideproject/20210129/625696656/" title="棋牌對戰 Game Server開發">棋牌對戰 Game Server開發</a>
+      <br>
+    </li>
+    
+</ul>
+</div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Nick</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="總字數">20k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="所需總閱讀時間">37 分鐘</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/next-theme/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  //console.log('//unpkg.com/valine/dist/Valine.min.js');
+  //console.log('pjA02uKgAjL2CRzftK1FCI0P-MdYXbMMI');
+  //console.log('T4FxkgVpgo8Pm64TAQ9Bu0DF');
+  
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'pjA02uKgAjL2CRzftK1FCI0P-MdYXbMMI',
+      appKey     : 'T4FxkgVpgo8Pm64TAQ9Bu0DF',
+      placeholder: "留言 ~",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-TW' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : 'https://pja02ukg.api.lncldglobal.com'
+    });
+  }, window.Valine);
+});
+</script>
+
+    </div>
+</body>
+</html>
